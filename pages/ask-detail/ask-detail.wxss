@@ -1,0 +1,14 @@
+/* pages/ask-detail/ask-detail.wxss */
+.askBtn{display: block; float: right;margin-right: 20rpx; color: #49a3ff; font-size: 24rpx;}
+.askBtn::after{ content:""; display: inline-block; height: 30rpx; width: 20rpx; vertical-align: middle; margin-left:10rpx;background:url(https://style.org.hc360.com/images/cpk/cpkIndexIco.png) 3px -485rpx no-repeat;background-size:300rpx 600rpx;}
+.askBoxCon{overflow: hidden; background: #fff; margin-top:0;}
+.askList{ padding: 20rpx; border-bottom: 1rpx solid #e4e4e4;} 
+.askName,.answerCon{ position: relative; margin-bottom:20rpx; overflow: hidden; font-size: 28rpx; color: #333; line-height:50rpx; padding-bottom:3rpx; padding-left: 38rpx;}
+.askName::before{ content: "问"; font-size: 20rpx; display: block; height: 28rpx; width: 28rpx; background: #fca000; text-align: center; line-height: 28rpx; left: 0; top: 11rpx; position:absolute; color: #fff; border-radius: 4rpx;}
+.answerCon::before{ content: "答"; font-size: 20rpx; display: block; height: 28rpx; width: 28rpx; background: #49a3ff; text-align: center; line-height: 28rpx;left: 0; top:11rpx; position:absolute; color: #fff; border-radius: 4rpx;}
+.answerConLeft{ float: left; width: 75%;display: block;font-weight: bold;}
+.answerConRig{ float: right;font-size:24rpx; color:#999;}
+.askList:last-child{border-bottom:none;}
+.askNameLeft{ float: left; display: block; width: 75%;font-weight: bold;}
+.askNameRig{float: right;display: block; width:25%; text-align: right; color: #999; font-size: 24rpx;}
+.askBot{clear: both; width: 100%; font-size: 28rpx; color: #666; padding-top: 3rpx;}

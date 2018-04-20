@@ -1,0 +1,6 @@
+/* pages/instructions/instructions.wxss */
+.title{ font-size: 34rpx; padding: 30rpx 0; text-align: center;}
+.intructionsCon{ text-align: left; line-height: 46rpx; padding:20rpx 35rpx; font-size: 26rpx; color: #666; }
+.intructionsBox{background: #fff; padding: 10rpx 0 30rpx;}
+.intructionsImg{ padding: 30rpx 0 0 0; text-align: center;}
+.intructionsImg image{max-width: 680rpx;}

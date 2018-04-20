@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/manage/manage",
+    "pages/detail/detail",
+    "pages/class/class",
+    "pages/search-list/search-list",
+    "pages/search/search",
+    "pages/index/index",
+    "pages/about-us/about-us",
+    "pages/download-img/download-img",
+    "pages/problems/problems",
+    "pages/ask/ask",
+    "pages/news/news",
+    "pages/quote/quote",
+    "pages/score-2/score-2",
+    "pages/contrast-2/contrast-2",
+    "pages/pro-contrast/pro-contrast",
+    "pages/score-1/score-1",
+    "pages/edit/edit",
+    "pages/instructions/instructions",
+    "pages/collection/collection",
+    "pages/ask-detail/ask-detail",
+    "pages/fill-ask/fill-ask",
+    "pages/distribution/distribution",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#181818",
+    "navigationBarTitleText": "产品库",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#ff3b3b",
+    "borderStyle": "#e4e4e4",
+    "backgroundColor": "#fff",
+    "font-size": "22rpx",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/botIco1.png",
+        "selectedIconPath": "image/botIco1Cur.png"
+      },
+      {
+        "pagePath": "pages/class/class",
+        "text": "分类",
+        "iconPath": "image/botIco2.png",
+        "selectedIconPath": "image/botIco2Cur.png"
+      },
+      {
+        "pagePath": "pages/manage/manage",
+        "text": "我的",
+        "iconPath": "image/botIco3.png",
+        "selectedIconPath": "image/botIco3Cur.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

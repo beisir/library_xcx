@@ -1,0 +1,10 @@
+/* pages/news/news.wxss */
+.newsListCon{overflow: hidden; padding:0; margin-top:110rpx; background: #fff;}
+.newsList{border-bottom:1rpx solid #e4e4e4;padding:20rpx; height: 110rpx; overflow: hidden; position: relative;}
+.newsName{ font-size: 28rpx; color:#333; line-height: 40rpx; padding-top: 15rpx; width:75%; display: block;text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.newsTime{ color: #999; font-size: 24rpx;}
+.newsImg{height:110rpx; width: 110rpx; position: absolute;right:20rpx; top:20rpx;}
+.newsImg image{max-height:110rpx;max-width: 110rpx;}
+.newsList:last-child{border-bottom:none;}
+
+.noImg .newsName{width:100%;}

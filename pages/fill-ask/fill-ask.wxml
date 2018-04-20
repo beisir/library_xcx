@@ -1,0 +1,7 @@
+<!--pages/fill-ask/fill-ask.wxml-->
+<view class='textareaBox'><textarea placeholder-class="phcolor" placeholder='请输入要提问的内容（50字以内）'></textarea></view>
+<view class='askClass'>当前分类 五金建材（螺栓）</view>
+<view class='fixedBtn'>
+  <button class='btn1' type='button'>提交给厂商</button>
+  <button class='btn2' type='button'>提交给供应商</button>
+</view>

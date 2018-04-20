@@ -1,0 +1,9 @@
+/* pages/fill-ask/fill-ask.wxss */
+.textareaBox{height:410rpx;padding:20rpx 20rpx; background:#fff;}
+textarea{font-size: 28rpx; line-height: 40rpx;}
+.phcolor{color: #ccc;}
+.askClass{ font-size: 28rpx; line-height: 96rpx; padding-left: 20rpx; height: 96rpx; margin-top: 20rpx; background: #fff;}
+.fixedBtn{ position: fixed; bottom: 0; left: 0; width: 100%; height: 96rpx;box-shadow:0rpx 0rpx 20rpx #ddd; line-height: 96rpx;  text-align: center;}
+.fixedBtn button{float: left; width: 50%; height: 96rpx; color: #333; border:0;font-size:30rpx; line-height: 96rpx; border-radius: 0;}
+.fixedBtn button::after{border:0;}
+.fixedBtn button.btn2{border-left: 1rpx solid #ddd; margin-left: -1rpx;}

@@ -1,0 +1,8 @@
+/* pages/problems/problems.wxss */
+.problemsBox{overflow: hidden;}
+.problemsList{ padding:25rpx 20rpx 20rpx;background: #fff; margin-bottom:10rpx;}
+.problemsTop,.problemsBot{ position: relative; margin-bottom:10rpx; overflow: hidden; font-size: 28rpx; color: #333; line-height:50rpx; padding-left: 38rpx;}
+.problemsTop{font-weight: bold;}
+.problemsBot{color: #666;}
+.problemsTop::before{ content: "Q"; font-size: 20rpx; display: block; height: 28rpx; width: 28rpx; background: #fca000; text-align: center; line-height: 28rpx; left: 0; top: 11rpx; position:absolute; color: #fff; border-radius: 4rpx;}
+.problemsBot::before{ content: "A"; font-size: 20rpx; display: block; height: 28rpx; width: 28rpx; background: #49a3ff; text-align: center; line-height: 28rpx;left: 0; top:11rpx; position:absolute; color: #fff; border-radius: 4rpx;}

@@ -1,0 +1,48 @@
+<!--pages/ask/ask.wxml-->
+<view class='tabTitBox'>
+  <view class='tabTit'><text>综述</text></view>
+  <view class='tabTit'><text>报价</text></view>
+  <view class='tabTit'><text>资讯</text></view>
+  <view class='tabTit'><text class='cur'>问答</text></view>
+</view>
+
+<view class='askBoxCon'>
+  <view class='askList'>
+    <view class='askName'><text class='askNameLeft'>桌子能用吗？</text><text class='askNameRig'>2018-04-19</text></view>
+    <view class='answerCon'>
+      <text class='answerConLeft'>北京商贸有限公司回复：</text><text class='answerConRig'>2个回答</text>
+      <view class='askBot'>可以的，订购电话459678989</view>
+    </view>
+  </view>
+  <view class='askList'>
+    <view class='askName'><text class='askNameLeft'>桌子能用吗？</text><text class='askNameRig'>2018-04-19</text></view>
+    <view class='answerCon'>
+      <text class='answerConLeft'>北京商贸有限公司回复：</text><text class='answerConRig'>2个回答</text>
+      <view class='askBot'>可以的，订购电话4可以的，订购电话4可以的，订购电话4可以的，订购电话4可以的，订购电话4可以的，订购电话4</view>
+    </view>
+  </view>  <view class='askList'>
+    <view class='askName'><text class='askNameLeft'>桌子能用吗？</text><text class='askNameRig'>2018-04-19</text></view>
+    <view class='answerCon'>
+      <text class='answerConLeft'>北京商贸有限公司回复：</text><text class='answerConRig'>2个回答</text>
+      <view class='askBot'>可以的，订购电话459678989</view>
+    </view>
+  </view>  <view class='askList'>
+    <view class='askName'><text class='askNameLeft'>桌子能用吗？</text><text class='askNameRig'>2018-04-19</text></view>
+    <view class='answerCon'>
+      <text class='answerConLeft'>北京商贸有限公司回复：</text><text class='answerConRig'>2个回答</text>
+      <view class='askBot'>可以的，订购电话4可以的，订购电话4可以的，订购电话4可以的，订购电话4</view>
+    </view>
+  </view>  <view class='askList'>
+    <view class='askName'><text class='askNameLeft'>桌子能用吗？</text><text class='askNameRig'>2018-04-19</text></view>
+    <view class='answerCon'>
+      <text class='answerConLeft'>北京商贸有限公司回复：</text><text class='answerConRig'>2个回答</text>
+      <view class='askBot'>可以的，订购电话459678989</view>
+    </view>
+  </view>
+</view>
+<view class="more">
+  <view class='lineBot'>
+    <text class='textBot'>没有更多了</text>
+  </view>
+</view>
+<view class='askBtn'>我要提问</view>

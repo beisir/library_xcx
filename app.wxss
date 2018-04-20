@@ -1,0 +1,18 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+page{background: #f5f5f5;}
+.tabTit{ float: left; width: 25%; text-align: center; font-size: 28rpx; position: relative;}
+text.cur{ color: #ef322c;}
+text.cur::after{content:""; margin: 0 auto; position: absolute; left: 50%; margin-left: -50rpx; bottom: 0; display: block; width: 100rpx; height: 6rpx; background: #ef322c; border-radius:10rpx;}
+.tabTitBox{ height: 90rpx; line-height: 90rpx; background: #fff; position: fixed; left: 0; top:0;width:100%;z-index:50;box-shadow:0rpx 0rpx 20rpx #ddd;}
+.more{clear:both;height:60rpx;text-align:center;font-size:30rpx;color:#ddd; padding:30rpx 0 70rpx;}
+.lineBot{width:348rpx;height:20rpx;border-bottom:1rpx solid #ddd;margin:0 auto;}
+.textBot{width:190rpx;height:40rpx;text-align:center;background:#f5f5f5;display:block;margin:0 auto;}

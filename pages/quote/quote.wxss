@@ -1,0 +1,13 @@
+/* pages/quote/quote.wxss */
+.bjBoxCon{ overflow: hidden; clear: both; background:#fff; margin-top:110rpx;}
+.bjBoxList{ overflow: hidden; border-bottom: 1rpx solid #e4e4e4; padding:24rpx 20rpx;}
+.bjName{font-size: 28rpx; color: #333; line-height: 40rpx;}
+.bjNameLeft{float: left; width:70%;text-overflow: ellipsis; white-space: nowrap; overflow: hidden; display: block;}
+.bjPrice{float: right;color: #ff3b3b; font-size:40rpx;padding:0x 0 5rpx;}
+.bjBotState{ display: block; float: left; background: #49a3ff; height: 24rpx; font-size: 22rpx; padding: 0 15rpx; border:1px solid #49a3ff; border-radius:5rpx; line-height:24rpx; color: #fff;margin-right: 20rpx;margin-top: 20rpx;}
+.bjBotAddress{ display: block; float: left;font-size: 22rpx; padding: 0 15rpx;border:1px solid #49a3ff; border-radius: 5rpx; color: #49a3ff; line-height: 24rpx; height: 24rpx; margin-right: 20rpx; margin-top: 20rpx;}
+.bjBotScore{ float: left;color: #fca000; font-size: 22rpx;margin-top: 20rpx;}
+.bjNameBot{ padding-top: 5rpx; overflow: hidden; clear: both;}
+.telBtn{float: right; padding: 0 30rpx; font-size: 24rpx; color: #333; border: 1px solid #999; background: #fff; margin-left: 20rpx;}
+.telBtn::after{border:0;}
+.bjBoxList:last-child{border-bottom:none;}

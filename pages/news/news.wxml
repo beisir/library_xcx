@@ -1,0 +1,63 @@
+<!--pages/news/news.wxml-->
+<view class='tabTitBox'>
+  <view class='tabTit'><text>综述</text></view>
+  <view class='tabTit'><text>报价</text></view>
+  <view class='tabTit'><text class='cur'>资讯</text></view>
+  <view class='tabTit'><text>问答</text></view>
+</view>
+<view class='newsListCon'>
+    <view class='newsList'>
+      <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
+      <text class='newsTime'>2018-04-16  18:12:23</text>
+      <view class='newsImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+    </view>
+    <view class='newsList'>
+      <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
+      <text class='newsTime'>2018-04-16  18:12:23</text>
+      <view class='newsImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+    </view>
+    <view class='newsList'>
+      <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
+      <text class='newsTime'>2018-04-16  18:12:23</text>
+      <view class='newsImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+    </view>
+    <view class='newsList noImg'>
+      <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
+      <text class='newsTime'>2018-04-16  18:12:23</text>
+    </view>
+        <view class='newsList'>
+      <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
+      <text class='newsTime'>2018-04-16  18:12:23</text>
+      <view class='newsImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+    </view>
+    <view class='newsList'>
+      <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
+      <text class='newsTime'>2018-04-16  18:12:23</text>
+      <view class='newsImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+    </view>
+        <view class='newsList'>
+      <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
+      <text class='newsTime'>2018-04-16  18:12:23</text>
+      <view class='newsImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+    </view>
+    <view class='newsList'>
+      <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
+      <text class='newsTime'>2018-04-16  18:12:23</text>
+      <view class='newsImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+    </view>
+        <view class='newsList'>
+      <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
+      <text class='newsTime'>2018-04-16  18:12:23</text>
+      <view class='newsImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+    </view>
+    <view class='newsList'>
+      <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
+      <text class='newsTime'>2018-04-16  18:12:23</text>
+      <view class='newsImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+    </view>
+  </view>
+<view class="more">
+  <view class='lineBot'>
+    <text class='textBot'>没有更多了</text>
+  </view>
+</view>

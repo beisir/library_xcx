@@ -1,0 +1,44 @@
+<!--pages/distribution/distribution.wxml-->
+<view class='distributionBox'>
+  <view class='disList'>
+    <view class='disListTop'>
+      <view class='disImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+      <text class='proName'>【批发拓森麻花钻 不锈钢高速钢HSS开孔钻头含钴高M35麻花钻头直柄</text>
+    </view>
+    <view class='disListBot'>
+      <text class='disBotLeft'>申请日期：2018-12-12</text><text class='disBotRig'>状态：已提交给厂商</text>
+    </view>
+  </view>
+  <view class='disList'>
+    <view class='disListTop'>
+      <view class='disImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+      <text class='proName'>【批发拓森麻花钻 不锈钢高速钢HSS开孔钻头含钴高M35麻花钻头直柄</text>
+    </view>
+    <view class='disListBot'>
+      <text class='disBotLeft'>申请日期：2018-12-12</text><text class='disBotRig'>状态：已提交给厂商</text>
+    </view>
+  </view>
+  <view class='disList'>
+    <view class='disListTop'>
+      <view class='disImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+      <text class='proName'>【批发拓森麻花钻 不锈钢高速钢HSS开孔钻头含钴高M35麻花钻头直柄</text>
+    </view>
+    <view class='disListBot'>
+      <text class='disBotLeft'>申请日期：2018-12-12</text><text class='disBotRig'>状态：已提交给厂商</text>
+    </view>
+  </view>
+  <view class='disList'>
+    <view class='disListTop'>
+      <view class='disImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+      <text class='proName'>【批发拓森麻花钻 不锈钢高速钢HSS开孔钻头含钴高M35麻花钻头直柄</text>
+    </view>
+    <view class='disListBot'>
+      <text class='disBotLeft'>申请日期：2018-12-12</text><text class='disBotRig'>状态：已提交给厂商</text>
+    </view>
+  </view>
+</view>
+<view class="more">
+  <view class='lineBot'>
+    <text class='textBot'>没有更多了</text>
+  </view>
+</view>

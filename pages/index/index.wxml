@@ -1,0 +1,117 @@
+<!--index.wxml-->
+<view class='topSearch'>
+  <view class='searchCon'><input placeholder-class="phcolor" type='text' placeholder='请输入商品关键字' /></view>
+</view>
+<view class='scroll'>
+  <view class='scrollCon'><image class='scrollImg' src='https://style.org.hc360.com/images/cpk/bImg1.png'></image></view>
+  <view class='scrollIco'>
+    <icon class='cur'></icon><icon></icon><icon></icon><icon></icon>
+  </view>
+</view>
+<view class='navBox'>
+  <view class="navTit"><icon class='ico1'></icon><text>装修建材</text></view>
+  <view class="navTit"><icon class='ico2'></icon><text>五金工具</text></view>
+  <view class="navTit"><icon class='ico3'></icon><text>建筑保温</text></view>
+  <view class="navTit"><icon class='ico4'></icon><text>管材管件</text></view>
+</view>
+<view class='hcNewsList'>
+  <icon class='newsIco'></icon>
+  <view class='newsListCon'>
+    <view class='list'><view class='hotIco'>HOT</view><text>响应建筑节能大潮设计成趋势响应建筑节能大趋势响应建筑节能大</text></view>
+    <view class='list'><view class='hotIco'>HOT</view><text>响应建筑节能大潮设计成趋势响应建筑</text></view>
+  </view>
+</view>
+<view class='box1'>
+  <view class='box1Tit'><text>大家都在看</text><view class='moreLink'>更多</view></view>
+  <view class='proList'>
+    <view class='proCon'>
+      <view class='proImgCon'><image class='proImg' src='https://style.org.hc360.com/images/microMall/program/proGimg.png'></image></view>  
+      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
+      <view class='price'>
+        ￥<text class='allprice'>168.</text>00
+      </view>
+    </view>
+    <view class='proCon'>
+      <view class='proImgCon'><image class='proImg' src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
+      <view class='price'>
+        ￥<text class='allprice'>168.</text>00
+      </view>
+    </view>
+    <view class='proCon'>
+      <view class='proImgCon'><image class='proImg' src='https://style.org.hc360.com/images/microMall/program/aimg3.jpg'></image></view>
+      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
+      <view class='price'>
+        ￥<text class='allprice'>168.</text>00
+      </view>
+    </view>
+    <view class='proCon'>
+      <view class='proImgCon'><image class='proImg' src='https://style.org.hc360.com/images/microMall/program/aimg4.jpg'></image></view>
+      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
+      <view class='price'>
+        ￥<text class='allprice'>168.</text>00
+      </view>
+    </view>
+    <view class='proCon'>
+      <view class='proImgCon'><image class='proImg' src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
+      <view class='price'>
+        ￥<text class='allprice'>168.</text>00
+      </view>
+    </view>
+    <view class='proCon'>
+      <view class='proImgCon'><image class='proImg' src='https://style.org.hc360.com/images/microMall/program/aimg3.jpg'></image></view>
+      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
+      <view class='price'>
+        ￥<text class='allprice'>168.</text>00
+      </view>
+    </view>
+  </view>
+</view>
+<view class='box2'>
+  <view class='box2Tit'><text>为你推荐</text><view class='moreLink'>更多</view></view>
+  <view class='proList'>
+    <view class='proCon'>
+      <view class='proImgCon'><image class='proImg' src='https://style.org.hc360.com/images/microMall/program/proGimg.png'></image></view>  
+      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
+      <view class='price'>
+        ￥<text class='allprice'>168.</text>00
+      </view>
+    </view>
+    <view class='proCon'>
+      <view class='proImgCon'><image class='proImg' src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
+      <view class='price'>
+        ￥<text class='allprice'>168.</text>00
+      </view>
+    </view>
+    <view class='proCon'>
+      <view class='proImgCon'><image class='proImg' src='https://style.org.hc360.com/images/microMall/program/aimg3.jpg'></image></view>
+      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
+      <view class='price'>
+        ￥<text class='allprice'>168.</text>00
+      </view>
+    </view>
+    <view class='proCon'>
+      <view class='proImgCon'><image class='proImg' src='https://style.org.hc360.com/images/microMall/program/aimg4.jpg'></image></view>
+      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
+      <view class='price'>
+        ￥<text class='allprice'>168.</text>00
+      </view>
+    </view>
+    <view class='proCon'>
+      <view class='proImgCon'><image class='proImg' src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
+      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
+      <view class='price'>
+        ￥<text class='allprice'>168.</text>00
+      </view>
+    </view>
+    <view class='proCon'>
+      <view class='proImgCon'><image class='proImg' src='https://style.org.hc360.com/images/microMall/program/aimg3.jpg'></image></view>
+      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
+      <view class='price'>
+        ￥<text class='allprice'>168.</text>00
+      </view>
+    </view>
+  </view>
+</view>

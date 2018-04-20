@@ -1,0 +1,57 @@
+<!--pages/contrast-2/contrast-2.wxml-->
+<view class='contrastPro'>
+  <view class='contrastProTop'>
+    <view class='vsCon'>对比</view>
+    <view class='contrastProRig'>
+      <view class='pro1'><view class='pro1Img'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view><text class='proName'>常固M20常固M20常固M20</text></view>
+      <view class='pro2'><view class='pro2Img'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view><text class='proName'>米脂M20</text></view>
+    </view>
+  </view>  
+</view>
+<view class='detailBox'>
+  <view class='detailTit'>主要参数</view>
+  <view class='parameterBoxCon'>
+    <view class='parameterListCon'>
+      <view class='parameterLeft'>主要参数</view>
+      <view class='parameterRig'>
+        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
+      </view>
+    </view>
+    <view class='parameterListCon'>
+      <view class='parameterLeft'>规格参数</view>
+      <view class='parameterRig'>
+        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
+      </view>
+    </view>
+    <view class='parameterListCon'>
+      <view class='parameterLeft'>机械性能</view>
+      <view class='parameterRig'>
+        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='detailBox'>
+  <view class='detailTit'>规则参数</view>
+  <view class='parameterBoxCon'>
+    <view class='parameterListCon'>
+      <view class='parameterLeft'>规则参数</view>
+      <view class='parameterRig'>
+        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
+      </view>
+    </view>
+    <view class='parameterListCon'>
+      <view class='parameterLeft'>规格参数</view>
+      <view class='parameterRig'>
+        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
+      </view>
+    </view>
+    <view class='parameterListCon'>
+      <view class='parameterLeft'>机械性能</view>
+      <view class='parameterRig'>
+        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
+      </view>
+    </view>
+  </view>
+</view>

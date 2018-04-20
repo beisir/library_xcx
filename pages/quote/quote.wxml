@@ -1,0 +1,62 @@
+<!--pages/quote/quote.wxml-->
+<view class='tabTitBox'>
+  <view class='tabTit'><text>综述</text></view>
+  <view class='tabTit'><text class='cur'>报价</text></view>
+  <view class='tabTit'><text>资讯</text></view>
+  <view class='tabTit'><text>问答</text></view>
+</view>
+<view class='bjBoxCon'>
+  <view class='bjBoxList'>
+    <view class='bjName'><text class='bjNameLeft'>永年县西苏乡孔村国磊紧固件加工厂</text><view class='bjPrice'><text class="proPriceText">￥</text>3880.<text class="proPriceText">00</text></view></view>
+    <view class='bjNameBot'>
+      <text class='bjBotState'>分期</text><text class='bjBotAddress'>河北</text><text class='bjBotScore'>综合评分：9.8</text><button class='telBtn'>电话咨询</button>
+    </view>
+  </view>
+  <view class='bjBoxList'>
+    <view class='bjName'><text class='bjNameLeft'>永年县西苏乡孔村国磊紧固件加工厂</text><view class='bjPrice'><text class="proPriceText">￥</text>3880.<text class="proPriceText">00</text></view></view>
+    <view class='bjNameBot'>
+      <text class='bjBotState'>分期</text><text class='bjBotAddress'>河北</text><text class='bjBotScore'>综合评分：9.8</text><button class='telBtn'>电话咨询</button>
+    </view>
+  </view>
+  <view class='bjBoxList'>
+    <view class='bjName'><text class='bjNameLeft'>永年县西苏乡孔村国磊紧固件加工厂永年县西苏乡孔村国磊紧固件加工厂</text><view class='bjPrice'><text class="proPriceText">￥</text>3880.<text class="proPriceText">00</text></view></view>
+    <view class='bjNameBot'>
+      <text class='bjBotState'>分期</text><text class='bjBotAddress'>河北</text><text class='bjBotScore'>综合评分：9.8</text><button class='telBtn'>电话咨询</button>
+    </view>
+  </view>
+    <view class='bjBoxList'>
+    <view class='bjName'><text class='bjNameLeft'>永年县西苏乡孔村国磊紧固件加工厂永年县西苏乡孔村国磊紧固件加工厂</text><view class='bjPrice'><text class="proPriceText">￥</text>3880.<text class="proPriceText">00</text></view></view>
+    <view class='bjNameBot'>
+      <text class='bjBotState'>分期</text><text class='bjBotAddress'>河北</text><text class='bjBotScore'>综合评分：9.8</text><button class='telBtn'>电话咨询</button>
+    </view>
+  </view>
+    <view class='bjBoxList'>
+    <view class='bjName'><text class='bjNameLeft'>永年县西苏乡孔村国磊紧固件加工厂永年县西苏乡孔村国磊紧固件加工厂</text><view class='bjPrice'><text class="proPriceText">￥</text>3880.<text class="proPriceText">00</text></view></view>
+    <view class='bjNameBot'>
+      <text class='bjBotState'>分期</text><text class='bjBotAddress'>河北</text><text class='bjBotScore'>综合评分：9.8</text><button class='telBtn'>电话咨询</button>
+    </view>
+  </view>
+    <view class='bjBoxList'>
+    <view class='bjName'><text class='bjNameLeft'>永年县西苏乡孔村国磊紧固件加工厂永年县西苏乡孔村国磊紧固件加工厂</text><view class='bjPrice'><text class="proPriceText">￥</text>3880.<text class="proPriceText">00</text></view></view>
+    <view class='bjNameBot'>
+      <text class='bjBotState'>分期</text><text class='bjBotAddress'>河北</text><text class='bjBotScore'>综合评分：9.8</text><button class='telBtn'>电话咨询</button>
+    </view>
+  </view>
+    <view class='bjBoxList'>
+    <view class='bjName'><text class='bjNameLeft'>永年县西苏乡孔村国磊紧固件加工厂永年县西苏乡孔村国磊紧固件加工厂</text><view class='bjPrice'><text class="proPriceText">￥</text>3880.<text class="proPriceText">00</text></view></view>
+    <view class='bjNameBot'>
+      <text class='bjBotState'>分期</text><text class='bjBotAddress'>河北</text><text class='bjBotScore'>综合评分：9.8</text><button class='telBtn'>电话咨询</button>
+    </view>
+  </view>
+    <view class='bjBoxList'>
+    <view class='bjName'><text class='bjNameLeft'>永年县西苏乡孔村国磊紧固件加工厂永年县西苏乡孔村国磊紧固件加工厂</text><view class='bjPrice'><text class="proPriceText">￥</text>3880.<text class="proPriceText">00</text></view></view>
+    <view class='bjNameBot'>
+      <text class='bjBotState'>分期</text><text class='bjBotAddress'>河北</text><text class='bjBotScore'>综合评分：9.8</text><button class='telBtn'>电话咨询</button>
+    </view>
+  </view>
+</view>
+<view class="more">
+  <view class='lineBot'>
+    <text class='textBot'>没有更多了</text>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/ask-detail/ask-detail.wxml-->
+<view class='askBoxCon'>
+  <view class='askList'>
+    <view class='askName'><text class='askNameLeft'>桌子能用吗？</text><text class='askNameRig'>2018-04-19</text></view>
+    <view class='answerCon'>
+      <text class='answerConLeft'>北京商贸有限公司回复：</text>
+      <view class='askBot'>可以的，订购电话459678989</view>
+    </view>
+    <view class='answerCon'>
+      <text class='answerConLeft'>北京商贸有限公司回复：</text>
+      <view class='askBot'>可以的，订购电话4可以的，订购电话4可以的，订购电话4可以的，订购电话4可以的，订购电话4可以的，订购电话4</view>
+    </view>
+    <view class='answerCon'>
+      <text class='answerConLeft'>北京商贸有限公司回复：</text>
+      <view class='askBot'>可以的，订购电话459678989</view>
+    </view>
+    <view class='answerCon'>
+      <text class='answerConLeft'>北京商贸有限公司回复：</text>
+      <view class='askBot'>可以的，订购电话4可以的，订购电话4可以的，订购电话4可以的，订购电话4可以的，订购电话4可以的，订购电话4</view>
+    </view>
+  </view>
+</view>

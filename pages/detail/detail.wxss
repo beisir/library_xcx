@@ -1,0 +1,79 @@
+/* pages/detail/detail.wxss */
+.proImgBox{height:500rpx;width:100%;background: #fff; margin-top: 90rpx;}
+.swiper{width: 100%;height: 500rpx;}
+.proImgBoxImg{width:100%;height:500rpx;}
+.proTit{padding:20rpx 25rpx 30rpx;border-bottom:20rpx solid #f8f8f8; position: relative; background: #fff;}
+.proTitle{line-height: 40rp;font-size:30rpx;color:#333;padding-right:111rpx; display: block;overflow: hidden;}
+.proPrice{ color: #ff3b3b; font-size:40rpx;padding:20rpx 0 5rpx;}
+.proPriceText{ font-size: 30rpx;}
+.shareBox{position:absolute; right:20rpx;top:12rpx; text-align:center;font-size:24rpx;color: #999;width:90rpx;padding-top:55rpx;background:url(https://style.org.hc360.com/images/cpk/cpkIndexIco.png) no-repeat 32rpx -240rpx;background-size:300rpx 600rpx; white-space: nowrap;border:1px solid #fff; height:85rpx; line-height: 30rpx;}
+.shareBox::after{border:0;} 
+.sharebutton{position:absolute; right:20rpx;top:12rpx;width:90rpx;height:100rpx;opacity: 0;z-index: 100;}
+.detailCon{overflow:hidden; padding-bottom:120rpx;background: #fff;}
+.proPrice button{ float: right; padding: 0 18rpx; font-size: 24rpx; color: #333; border: 1px solid #999; background: #fff; margin-left: 20rpx;}
+.proPrice button::after{border:0;}
+button.contrast{background:url(https://style.org.hc360.com/images/cpk/cpkIndexIco.png) no-repeat 20rpx -301rpx;background-size:300rpx 600rpx; padding: 0 18rpx 0 58rpx;}
+.detailBox{ overflow: hidden; background: #fff; margin-bottom: 20rpx;}
+.detailTit{ height: 90rpx; line-height: 90rpx; color: #333; padding-left: 20rpx; font-size:34rpx; border-bottom: 1px solid #e4e4e4;}
+.parameterBoxCon{ padding: 20rpx; font-size: 24rpx; color: #333;}
+.parameterListCon{ overflow: hidden; border-bottom: 1rpx solid #e4e4e4; position: relative; background:#f8f8f8;}
+.parameterLeft{ height: 100%; position: absolute; top: 0; left: 0; width: 200rpx; padding-left: 30rpx; background: #eee; line-height: 80rpx;box-sizing:border-box;}
+.parameterRig{ margin-left: 200rpx;}
+.parameterList{ min-height:40rpx; padding: 20rpx 0; line-height: 40rpx;border-bottom: 1rpx solid #e4e4e4;}
+.parameterList:last-child,.parameterListCon:last-child{ border-bottom: none;}
+.pLeft{ padding-left: 30rpx; width:30%; display:block;float: left;box-sizing:border-box;}
+.pRig{padding-left: 30rpx;width:70%; display:block;float: left; color: #999;box-sizing:border-box;}
+.bjBoxCon{ overflow: hidden;}
+.bjBoxList{ overflow: hidden; border-bottom: 1rpx solid #e4e4e4; padding:24rpx 20rpx;}
+.bjName{font-size: 28rpx; color: #333; line-height: 40rpx;}
+.bjNameLeft{float: left; width:70%;text-overflow: ellipsis; white-space: nowrap; overflow: hidden; display: block;}
+.bjPrice{float: right;color: #ff3b3b; font-size:40rpx;padding:0x 0 5rpx;}
+.bjBotState{ display: block; float: left; background: #49a3ff; height: 24rpx; font-size: 22rpx; padding: 0 15rpx; border:1px solid #49a3ff; border-radius:5rpx; line-height:24rpx; color: #fff;margin-right: 20rpx;margin-top: 20rpx;}
+.bjBotAddress{ display: block; float: left;font-size: 22rpx; padding: 0 15rpx;border:1px solid #49a3ff; border-radius: 5rpx; color: #49a3ff; line-height: 24rpx; height: 24rpx; margin-right: 20rpx; margin-top: 20rpx;}
+.bjBotScore{ float: left;color: #fca000; font-size: 22rpx;margin-top: 20rpx;}
+.bjNameBot{ padding-top: 5rpx; overflow: hidden; clear: both;}
+.telBtn{float: right; padding: 0 30rpx; font-size: 24rpx; color: #333; border: 1px solid #999; background: #fff; margin-left: 20rpx;}
+.telBtn::after{border:0;}
+.moreBtn{ height:80rpx; font-size: 28rpx; color: #666; line-height: 80rpx; text-align: center;}
+.moreBtn::after{ content:""; display: inline-block; height: 30rpx; width: 30rpx; vertical-align: middle; margin-left:10rpx;background:url(https://style.org.hc360.com/images/cpk/cpkIndexIco.png) 5px -417rpx no-repeat;background-size:300rpx 600rpx;}
+.newsListCon{overflow: hidden; padding:0rpx 0}
+.newsList{border-bottom:1rpx solid #e4e4e4;padding:20rpx; height: 110rpx; overflow: hidden; position: relative;}
+.newsName{ font-size: 28rpx; color:#333; line-height: 40rpx; padding-top: 15rpx; width:75%; display: block;text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.newsTime{ color: #999; font-size: 24rpx;}
+.newsImg{height:110rpx; width: 110rpx; position: absolute;right:20rpx; top:20rpx;}
+.newsImg image{max-height:110rpx;max-width: 110rpx;}
+.askBtn{display: block; float: right;margin-right: 20rpx; color: #49a3ff; font-size: 24rpx;}
+.askBtn::after{ content:""; display: inline-block; height: 30rpx; width: 20rpx; vertical-align: middle; margin-left:10rpx;background:url(https://style.org.hc360.com/images/cpk/cpkIndexIco.png) 3px -485rpx no-repeat;background-size:300rpx 600rpx;}
+.askBoxCon{overflow: hidden;}
+.askList{ padding: 20rpx; border-bottom: 1rpx solid #e4e4e4;} 
+.askName,.answerCon{ position: relative; overflow: hidden; font-size: 28rpx; color: #333; line-height: 40rpx; padding-bottom: 8rpx; padding-left: 38rpx;}
+.askName::before{ content: "问"; font-size: 20rpx; display: block; height: 28rpx; width: 28rpx; background: #fca000; text-align: center; line-height: 28rpx; left: 0; top: 6rpx; position:absolute; color: #fff; border-radius: 4rpx;}
+.answerCon::before{ content: "答"; font-size: 20rpx; display: block; height: 28rpx; width: 28rpx; background: #49a3ff; text-align: center; line-height: 28rpx;left: 0; top:6rpx; position:absolute; color: #fff; border-radius: 4rpx;}
+.answerConLeft{ float: left; width: 75%;display: block;text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.answerConRig{ float: right;font-size:24rpx; color:#999;}
+.box2{overflow: hidden; padding:20rpx 5px 0; background: #f5f5f5; margin-bottom: 110rpx;}
+.moreLink{height:26rpx; position: absolute; right:20rpx;top:21rpx;color:#999;font-size:24rpx; line-height: 26rpx; padding-right:35rpx;background:url(https://style.org.hc360.com/images/cpk/cpkIndexIco.png) -220rpx 0 no-repeat; background-size: 300rpx 600rpx;}
+.proList{clear:both;padding:0 5rpx 10rpx;}
+.proCon{float:left;width:355rpx;height:510rpx;background:#fff;overflow:hidden;margin-bottom:12rpx;}
+.proCon:nth-child(even) {float:right;}
+.proImgCon{width:355rpx;height:355rpx;overflow:hidden;margin-bottom:15rpx;}
+.proImg{width:355rpx;height:355rpx;}
+.protil{height:72rpx;font-size:28rpx;color:#333;line-height:36rpx;padding:0 20rpx;display:inline-block;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical; margin-bottom: 8rpx;}
+.protil a{color:#333;text-decoration:none;}
+.price{color:#ff3b3b;font-size:24rpx;padding:0 20rpx; text-align: center;}
+.allprice{font-size: 34rpx; padding-top:10rpx; overflow: hidden;}
+.box2Tit text{ display: block;width:268rpx;height:38rpx; margin: 0 auto; font-size:34rpx; text-align: center;color:#ef322c; background:url(https://style.org.hc360.com/images/cpk/titBg.png) 0 -68rpx no-repeat; background-size:342rpx 106rpx; line-height: 36rpx; padding-left:52rpx;}
+.box2Tit{padding:16rpx 0 42rpx; position: relative;}
+.phcolor{color:#ccc;}
+.botFixed{ position:fixed; bottom: 0; width: 100%; left: 0; height: 98rpx; background: #fff; box-shadow:0rpx 0rpx 20rpx #bbb;}
+.botTel,.collectionIco,.collectionIcoCur{ float: left; width: 16%; text-align: center;height: 98rpx; font-size: 22rpx; padding-top: 10rpx;}
+.botTel::before,.collectionIco::before,.collectionIcoCur::before{ content: ""; display: block; margin: 0 auto; height: 45rpx; width: 45rpx;background:url(https://style.org.hc360.com/images/cpk/cpkIndexIco.png) 0 0 no-repeat; background-size: 300rpx 600rpx;}
+.botTel::before{ background-position:-58rpx -252rpx;}
+.collectionIco::before{background-position:-109rpx -252rpx;}
+.collectionIcoCur{color:#ef322c;}
+.collectionIcoCur::before{background-position:-160rpx -252rpx;}
+.botBtn1,.botBtn2{ float: left; width: 34%; text-align: center; font-size: 30rpx; line-height: 98rpx; color: #fff;}
+.botBtn1{ background: #fca000;}
+.botBtn2{ background: #ef322c;}
+.noImg .newsName{width:100%;}
+.fixedBtn{ position: fixed; right: 30rpx; bottom:200rpx; line-height: 80rpx; text-align: center; font-size: 42rpx; color: #fff; height: 80rpx; width: 80rpx;background: linear-gradient(#fd5554, #ef322c); border-radius: 50%;}

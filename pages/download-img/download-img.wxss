@@ -1,0 +1,10 @@
+/* pages/download-img/download-img.wxss */
+.fixedBtn{ position: fixed; bottom: 0; left: 0; width: 100%; height: 96rpx;box-shadow:0rpx 0rpx 20rpx #ddd; line-height: 96rpx;  text-align: center;}
+.fixedBtn button{float: left; width: 50%; height: 96rpx; color: #333; border:0;font-size:30rpx; line-height: 96rpx; border-radius: 0;}
+.fixedBtn button::after{border:0;}
+.fixedBtn button.btn2{border-left: 1rpx solid #ddd; margin-left: -1rpx;}
+.downImgBox{ padding:7rpx; overflow: hidden;}
+.downImg{width: 177rpx; height: 177rpx; float: left; margin:4rpx; position: relative;}
+.downImg image{max-width: 177rpx;max-height:177rpx;}
+.ico{ position: absolute; top:4rpx; right: 4rpx;width:48rpx;height:48rpx;background:url(https://style.org.hc360.com/images/cpk/cpkIndexIco.png) -55rpx -553rpx no-repeat;background-size:300rpx 600rpx;}
+.icoCur{ position: absolute; top:4rpx; right: 4rpx;width:48rpx;height:48rpx;background:url(https://style.org.hc360.com/images/cpk/cpkIndexIco.png) 1rpx -553rpx no-repeat;background-size:300rpx 600rpx;}

@@ -1,0 +1,7 @@
+/* pages/about-us/about-us.wxss */
+.title{ font-size: 34rpx; padding: 30rpx 0; text-align: center;}
+.aboutUsBoxCon{ text-align: left; line-height: 46rpx; padding:20rpx 35rpx; font-size: 26rpx; color: #666; }
+.aboutUsCon{ text-indent: 2em;}
+.aboutUsBox{background: #fff; padding: 10rpx 0 30rpx;}
+.intructionsImg{ padding: 30rpx 0 0 0; text-align: center;}
+.intructionsImg image{max-width: 680rpx;}
