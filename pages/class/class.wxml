@@ -15,8 +15,9 @@
             class="scroll-view"
             scroll-y="true"
             scroll-with-animation="true"
-            scroll-top="{{scrollTop}}">
-            <view id="id0">
+            scroll-top="{{scrollTop}}"
+            bindscroll="scrollChange">
+            <view id="id0" class="class-container">
                 <view class='classRigCon'>
                     <view class='classRigTitCon'>
                         <text class='classRigTit'>装修建材  =======>>>>> 化工涂料</text>
@@ -98,7 +99,7 @@
                     </view>
                 </view>
             </view>
-            <view id="id1">
+            <view id="id1" class="class-container">
                 <view class='classRigCon'>
                     <view class='classRigTitCon'>
                         <text class='classRigTit'>装修建材  ======>>> 电子智能</text>
@@ -160,7 +161,7 @@
                     </view>
                 </view>
             </view>
-            <view id="id2">
+            <view id="id2" class="class-container">
                 <view class='classRigCon'>
                     <view class='classRigTitCon'>
                         <text class='classRigTit'>装修建材 =====>> 酒店家居</text>
@@ -182,7 +183,7 @@
                     </view>
                 </view>
             </view>
-            <view id="id3">
+            <view id="id3" class="class-container">
                 <view class='classRigCon'>
                     <view class='classRigTitCon'>
                         <text class='classRigTit'>装修建材 ======> 空调采暖</text>

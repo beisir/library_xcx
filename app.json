@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/class/class",
     "pages/index/index",
     "pages/manage/manage",
     "pages/search-list/search-list",
     "pages/search/search",
     "pages/detail/detail",
-    "pages/class/class",
     "pages/about-us/about-us",
     "pages/download-img/download-img",
     "pages/problems/problems",
