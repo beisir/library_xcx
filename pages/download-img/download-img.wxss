@@ -6,5 +6,5 @@
 .downImgBox{ padding:7rpx; overflow: hidden;}
 .downImg{width: 177rpx; height: 177rpx; float: left; margin:4rpx; position: relative;}
 .downImg image{max-width: 177rpx;max-height:177rpx;}
-.ico{ position: absolute; top:4rpx; right: 4rpx;width:48rpx;height:48rpx;background:url(https://style.org.hc360.com/images/cpk/cpkIndexIco.png) -55rpx -553rpx no-repeat;background-size:300rpx 600rpx;}
-.icoCur{ position: absolute; top:4rpx; right: 4rpx;width:48rpx;height:48rpx;background:url(https://style.org.hc360.com/images/cpk/cpkIndexIco.png) 1rpx -553rpx no-repeat;background-size:300rpx 600rpx;}
+.ico{ position: absolute; top:4rpx; right: 4rpx;width:48rpx;height:48rpx;background:url(https://192.168.120.32/images/cpk/cpkIndexIco.png) -55rpx -553rpx no-repeat;background-size:300rpx 600rpx;}
+.icoCur{ position: absolute; top:4rpx; right: 4rpx;width:48rpx;height:48rpx;background:url(https://192.168.120.32/images/cpk/cpkIndexIco.png) 1rpx -553rpx no-repeat;background-size:300rpx 600rpx;}

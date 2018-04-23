@@ -1,66 +1,30 @@
-// pages/personCenter/index.js
+import { AuthorIzation } from '../../utils/util.js';
 Page({
+    data: {
+        userInfo: {
+            nickName: '点击授权',
+            avatarUrl: 'https://style.org.hc360.com/images/microMall/program/mGrayLogo.png'
+        }
+    },
+    onLoad () {
+        const _this = this,
+            userInfo = wx.getStorageSync('userInfo');
+        if (userInfo !== '') {
+            _this.setData({
+                userInfo: userInfo
+            });
+        };
+    },
+    userInfoHandler(options) {
+        const _this = this;
+        let userInfo = options.detail.userInfo;
+        if (userInfo) {
+            _this.setData({
+                userInfo: userInfo
+            });
+            wx.setStorageSync('userInfo', userInfo)
+        }
+    }
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

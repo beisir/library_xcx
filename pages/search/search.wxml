@@ -8,6 +8,8 @@
 <view class='seaHistory'>
   <text>历史搜索</text>
   <view class='seaHistoryCon'>
-    <view class='seaWord'>螺栓</view><view class='seaWord'>螺母</view><view class='seaWord'>螺栓</view><view class='seaWord'>螺母</view>
+    <block wx:for="{{historical_terms}}" wx:key="{{item}}">
+        <view class='seaWord'>{{item}}</view>
+    </block>
   </view>
 </view>

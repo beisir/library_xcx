@@ -4,15 +4,15 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.98",
-	"appid": "wx057d7bea902cce77",
+	"libVersion": "1.9.91",
+	"appid": "wx4ab81cf09eebe848",
 	"projectname": "library_xcx",
 	"condition": {
 		"search": {

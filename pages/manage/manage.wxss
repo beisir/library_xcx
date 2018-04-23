@@ -6,15 +6,24 @@ page{height:100%;background:#f6f6f6;}
 .logoImg{width:135rpx;height:135rpx;border-radius:50%;}
 .signName{font-size:42rpx;color:#fff;position:absolute;left:200rpx;top:50rpx;}
 .signClass{width:160rpx;height:40rpx;line-height:35rpx;font-size:24rpx;color:#fff;text-align:center;background:#da0d07;border-radius:20rpx;position:absolute;left:200rpx;top:120rpx; display:block;overflow:hidden;}
-.signClass::after{width:12rpx;height:20rpx;background:url(https://style.org.hc360.com/images/cpk/p_c_ico.png) no-repeat -442rpx 2rpx;background-size:500rpx 48rpx; content:"";display:inline-block;margin-left:10rpx;}
+.signClass::after{width:12rpx;height:20rpx;background:url(https://192.168.120.32/images/cpk/p_c_ico.png) no-repeat -442rpx 2rpx;background-size:500rpx 48rpx; content:"";display:inline-block;margin-left:10rpx;}
 
 .serviceBox{celar:both;padding:20rpx 30rpx;background:#fff;}
 .serviceList{height:70rpx;line-height:70rpx;font-size:34rpx;color:#333;padding:10rpx 0;position:relative;}
-.serviceList::after{width:15rpx;height:26rpx;background:url(https://style.org.hc360.com/images/cpk/p_c_ico.png) no-repeat -485rpx 2rpx;background-size:500rpx 48rpx; content:"";display:block;position:absolute;right:0;top:32rpx;}
-.icon1,.icon2,.icon3,.icon4,.icon5{width:46rpx;height:48rpx;display:inline-block;background:url(https://style.org.hc360.com/images/cpk/p_c_ico.png) no-repeat;background-size:500rpx 48rpx;vertical-align: middle;font-size:0;margin-right:34rpx;}
+.serviceList::after{width:15rpx;height:26rpx;background:url(https://192.168.120.32/images/cpk/p_c_ico.png) no-repeat -485rpx 2rpx;background-size:500rpx 48rpx; content:"";display:block;position:absolute;right:0;top:32rpx;}
+.icon1,.icon2,.icon3,.icon4,.icon5{width:46rpx;height:48rpx;display:inline-block;background:url(https://192.168.120.32/images/cpk/p_c_ico.png) no-repeat;background-size:500rpx 48rpx;vertical-align: middle;font-size:0;margin-right:34rpx;}
 .icon1{background-position:0 0;}
 .icon2{background-position:-72rpx 0;}
 .icon3{background-position:-149rpx 0;}
 .icon4{background-position:-226rpx 0;}
 .icon5{background-position:-304rpx 0;}
 .stxt{font-size:34rpx;color:#353535;}
+.user-btn{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+}

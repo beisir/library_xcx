@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/manage/manage",
-    "pages/detail/detail",
-    "pages/class/class",
     "pages/search-list/search-list",
     "pages/search/search",
-    "pages/index/index",
+    "pages/detail/detail",
+    "pages/class/class",
     "pages/about-us/about-us",
     "pages/download-img/download-img",
     "pages/problems/problems",
@@ -21,8 +21,7 @@
     "pages/collection/collection",
     "pages/ask-detail/ask-detail",
     "pages/fill-ask/fill-ask",
-    "pages/distribution/distribution",
-    "pages/logs/logs"
+    "pages/distribution/distribution"
   ],
   "window": {
     "backgroundTextStyle": "light",

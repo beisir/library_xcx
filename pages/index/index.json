@@ -1,5 +1,4 @@
 {
-    "navigationBarTitleText": "搜索结果",
     "usingComponents": {
         "productList": "/components/productList/productList"
     }

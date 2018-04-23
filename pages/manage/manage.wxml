@@ -1,12 +1,14 @@
 <!--pages/personCenter/index.wxml-->
 <view class="signBox">
   <view class='signLogo'>
-    <image class="logoImg" src='https://style.org.hc360.com/images/cpk/p_c_img.jpg'></image>
+    <image class="logoImg" src="{{userInfo.avatarUrl}}"></image>
   </view>
-  <text class='signName'>陈默冉</text>
-  <text class='signClass'>实体店主</text>
+  <!-- <button open-type="getUserInfo" bindgetuserinfo="userInfoHandler"> -->
+    <text class='signName'>{{userInfo.nickName}}</text>
+    <text class='signClass'>实体店主</text>
+    <button class="user-btn" open-type="getUserInfo" bindgetuserinfo="userInfoHandler"></button>
+  <!-- </button>  -->
 </view>
-
 <view class='serviceBox'>
   <view class="serviceList">
     <icon class="icon1"></icon>

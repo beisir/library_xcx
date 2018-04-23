@@ -3,8 +3,8 @@
   <view class='contrastProTop'>
     <view class='vsCon'>对比</view>
     <view class='contrastProRig'>
-      <view class='pro1'><view class='pro1Img'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view><text class='proName'>常固M20常固M20常固M20</text></view>
-      <view class='pro2'><view class='pro2Img'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view><text class='proName'>米脂M20</text></view>
+      <view class='pro1'><view class='pro1Img'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image></view><text class='proName'>常固M20常固M20常固M20</text></view>
+      <view class='pro2'><view class='pro2Img'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image></view><text class='proName'>米脂M20</text></view>
     </view>
   </view>  
 </view>

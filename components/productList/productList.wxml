@@ -1,13 +1,10 @@
-<!--pages/collection/collection.wxml-->
-<view class='box3'>
-  <view class='proList'>
+<view class='proList'>
     <view class='proCon'>
       <view class='proImgCon'><image class='proImg' src='https://192.168.120.32/images/microMall/program/proGimg.png'></image></view>  
       <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
       <view class='price'>
         ￥<text class='allprice'>168.</text>00
       </view>
-      <view class='collectionIco'></view>
     </view>
     <view class='proCon'>
       <view class='proImgCon'><image class='proImg' src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image></view>
@@ -15,7 +12,6 @@
       <view class='price'>
         ￥<text class='allprice'>168.</text>00
       </view>
-      <view class='collectionIco'></view>
     </view>
     <view class='proCon'>
       <view class='proImgCon'><image class='proImg' src='https://192.168.120.32/images/microMall/program/aimg3.jpg'></image></view>
@@ -23,7 +19,6 @@
       <view class='price'>
         ￥<text class='allprice'>168.</text>00
       </view>
-      <view class='collectionIco'></view>
     </view>
     <view class='proCon'>
       <view class='proImgCon'><image class='proImg' src='https://192.168.120.32/images/microMall/program/aimg4.jpg'></image></view>
@@ -31,7 +26,6 @@
       <view class='price'>
         ￥<text class='allprice'>168.</text>00
       </view>
-      <view class='collectionIco'></view>
     </view>
     <view class='proCon'>
       <view class='proImgCon'><image class='proImg' src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image></view>
@@ -39,7 +33,6 @@
       <view class='price'>
         ￥<text class='allprice'>168.</text>00
       </view>
-      <view class='collectionIco'></view>
     </view>
     <view class='proCon'>
       <view class='proImgCon'><image class='proImg' src='https://192.168.120.32/images/microMall/program/aimg3.jpg'></image></view>
@@ -47,12 +40,5 @@
       <view class='price'>
         ￥<text class='allprice'>168.</text>00
       </view>
-      <view class='collectionIco'></view>
     </view>
   </view>
-</view>
-<view class="more">
-  <view class='lineBot'>
-    <text class='textBot'>没有更多了</text>
-  </view>
-</view>

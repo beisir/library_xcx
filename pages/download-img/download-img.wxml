@@ -1,17 +1,17 @@
 <!--pages/download-img/download-img.wxml-->
 <view class='downImgBox'>
-  <view class='downImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image><view class='icoCur'></view></view>
-  <view class='downImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
-  <view class='downImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
-  <view class='downImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
-  <view class='downImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
-  <view class='downImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image><view class='icoCur'></view></view>
-  <view class='downImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
-  <view class='downImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
-  <view class='downImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
-  <view class='downImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
-  <view class='downImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
-  <view class='downImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
+  <view class='downImg'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image><view class='icoCur'></view></view>
+  <view class='downImg'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
+  <view class='downImg'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
+  <view class='downImg'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
+  <view class='downImg'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
+  <view class='downImg'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image><view class='icoCur'></view></view>
+  <view class='downImg'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
+  <view class='downImg'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
+  <view class='downImg'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
+  <view class='downImg'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
+  <view class='downImg'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
+  <view class='downImg'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image><view class='ico'></view></view>
 </view>
 <view class='fixedBtn'>
   <button class='btn1' type='button'>下载</button>
