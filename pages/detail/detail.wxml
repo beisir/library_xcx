@@ -1,53 +1,59 @@
-<!--pages/detail/detail.wxml-->
-<view class='tabTitBox'>
+<wxs src="../../utils/filter.wxs" module="tools" />
+<!-- <view class='tabTitBox'>
   <view class='tabTit'><text class='cur'>综述</text></view>
   <view class='tabTit'><text>报价</text></view>
   <view class='tabTit'><text>资讯</text></view>
   <view class='tabTit'><text>问答</text></view>
-</view>
+</view>   -->
 <view class="proImgBox">
-  <view><image class="proImgBoxImg" src="https://192.168.120.32/images/microMall/program/dImg1.png"></image></view>
+    <view>
+        <swiper class="swiper"
+            indicator-dots="{{prodimage.length <= 1 ? false : true }}"
+            circular="true"
+            autoplay="true">
+            <!-- <block wx:for="{{picUrls}}" wx:key="{{index}}"> -->
+                <swiper-item>
+                    <image
+                        class="proImgBoxImg"
+                        mode="aspectFill"
+                        src="https://192.168.120.32/images/microMall/program/dImg1.png"
+                        data-index="{{index}}"
+                        bindtap="imgInfo" />
+                </swiper-item> 
+            <!-- </block> -->
+        </swiper>
+        <!-- <image class="proImgBoxImg" src="https://192.168.120.32/images/microMall/program/dImg1.png"></image> -->
+    </view>
 </view>
 <view class="proTit">
-  <view class="proTitLeft">
-    <view class="proTitle">韩版 2018春新款女装韩版宽松连帽加厚套头加绒潮卫衣IG6431</view>
-    <view class="proPrice"><text class="proPriceText">￥</text>3880.<text class="proPriceText">00</text>
-      <button type='button' class='contrast'>对比</button><button type='button'>产品说明书</button>
+    <view class="proTitLeft">
+        <view class="proTitle">{{prodinfo.name}}</view>
+        <view class="proPrice">
+            <text class="proPriceText">￥</text>{{tools(prodinfo.price,0)}}.<text class="proPriceText">{{tools(prodinfo.price,1)}}</text> 
+            <button type='button' class='contrast'>对比</button>
+            <button type='button'>产品说明书</button>
+        </view>
     </view>
-  </view>
-  <button class="shareBox">分享</button>
+    <button class="shareBox" open-type="share">分享</button>
 </view>
 
 <view class='detailBox'>
-  <view class='detailTit'>常固M20详细参数</view>
-  <view class='parameterBoxCon'>
-    <view class='parameterListCon'>
-      <view class='parameterLeft'>主要参数</view>
-      <view class='parameterRig'>
-        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
-        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
-        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
-        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
-      </view>
+    <view class='detailTit'>常固M20详细参数</view>
+    <view class='parameterBoxCon'>
+        <view class='parameterListCon'>
+            <view class='parameterLeft'><text>产品参数</text></view>
+            <view class='parameterRig'>
+                <block wx:for="{{prodatt}}" wx:key="{{item.attName}}">
+                    <view class='parameterList'>
+                        <text class='pLeft'>{{item.attName}}</text>
+                        <text class='pRig'>{{item.attValue}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
     </view>
-    <view class='parameterListCon'>
-      <view class='parameterLeft'>规格参数</view>
-      <view class='parameterRig'>
-        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
-        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
-        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
-        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
-      </view>
-    </view>
-    <view class='parameterListCon'>
-      <view class='parameterLeft'>机械性能</view>
-      <view class='parameterRig'>
-        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
-      </view>
-    </view>
-  </view>
 </view>
-<view class='detailBox'>
+<!-- <view class='detailBox'>
   <view class='detailTit'>供应商报价</view>
   <view class='bjBoxCon'>
     <view class='bjBoxList'>
@@ -70,8 +76,8 @@
     </view>
     <view class='moreBtn'>更多报价</view>
   </view>
-</view>
-<view class='detailBox'>
+</view> -->
+<!-- <view class='detailBox'>
   <view class='detailTit'>相关资讯</view>
   <view class='newsListCon'>
     <view class='newsList'>
@@ -95,8 +101,8 @@
     </view>
     <view class='moreBtn'>更多资讯</view>
   </view>
-</view>
-<view class='detailBox'>
+</view> -->
+<!-- <view class='detailBox'>
   <view class='detailTit'>产品问答<text class='askBtn'>提问</text></view>
   <view class='askBoxCon'>
     <view class='askList'>
@@ -113,8 +119,8 @@
     </view>
     <view class='moreBtn'>更多回答</view>
   </view>
-</view>
-<view class='box2'>
+</view> -->
+<!-- <view class='box2'>
   <view class='box2Tit'><text>同类推荐</text></view>
   <view class='proList'>
     <view class='proCon'>
@@ -160,7 +166,7 @@
       </view>
     </view>
   </view>
-</view>
+</view> -->
 
 <view class='botFixed'>
   <view class='botTel'>咨询</view>

@@ -6,6 +6,7 @@
                 class="{{asideCur === index ? 'classCur': ''}}"
                 data-id="id{{index}}"
                 data-index="{{index}}"
+                data-title="{{item.supcatname}}"
                 data-supcatid="{{item.supcatid}}"
                 bindtap="selectAside">{{item.supcatname}}</text>    
         </block>    
@@ -17,7 +18,31 @@
             scroll-with-animation="true"
             scroll-top="{{scrollTop}}"
             bindscroll="scrollChange">
-            <view id="id0" class="class-container">
+            <view class="class-container">
+                <block>
+                    <view class='classRigCon'>
+                        <view class='classRigTitCon'>
+                            <text class='classRigTit'>{{title}}</text>
+                            <text class='classRigMore'>所有产品</text>
+                        </view>
+                        <view class='classRigBot'>
+                        {{JSON.stringify(contentArr)}}
+                            <block wx:for="{{contentArr}}" wx:for-item="childitem" wx:key="{{childitem.supcatname}}">
+                                 <navigator class='classLink'
+                                    url="/pages/search-list/search-list?bcid={{childitem.supcatid}}&key={{childitem.supcatname}}">
+                                    <image src='https://192.168.120.32/images/cpk/classImg1.jpg'></image>
+                                    <text>{{childitem.supcatname}}</text>
+                                </navigator> 
+                            </block>
+                        </view>
+                    </view>
+                </block>
+            </view> 
+
+
+
+
+            <!-- <view id="id0" class="class-container">
                 <view class='classRigCon'>
                     <view class='classRigTitCon'>
                         <text class='classRigTit'>装修建材  =======>>>>> 化工涂料</text>
@@ -98,173 +123,7 @@
                         </view>
                     </view>
                 </view>
-            </view>
-            <view id="id1" class="class-container">
-                <view class='classRigCon'>
-                    <view class='classRigTitCon'>
-                        <text class='classRigTit'>装修建材  ======>>> 电子智能</text>
-                        <text class='classRigMore'>所有产品</text>
-                    </view>
-                    <view class='classRigBot'>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg4.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg2.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg6.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                    </view>
-                </view>
-                <view class='classRigCon'>
-                    <view class='classRigTitCon'>
-                        <text class='classRigTit'>装修建材</text>
-                        <text class='classRigMore'>所有产品</text>
-                    </view>
-                    <view class='classRigBot'>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg4.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg5.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg6.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                    </view>
-                </view>
-                <view class='classRigCon'>
-                    <view class='classRigTitCon'>
-                        <text class='classRigTit'>装修建材</text>
-                        <text class='classRigMore'>所有产品</text>
-                    </view>
-                    <view class='classRigBot'>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg5.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg6.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg1.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                    </view>
-                </view>
-            </view>
-            <view id="id2" class="class-container">
-                <view class='classRigCon'>
-                    <view class='classRigTitCon'>
-                        <text class='classRigTit'>装修建材 =====>> 酒店家居</text>
-                        <text class='classRigMore'>所有产品</text>
-                    </view>
-                    <view class='classRigBot'>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg5.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg6.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg1.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                    </view>
-                </view>
-            </view>
-            <view id="id3" class="class-container">
-                <view class='classRigCon'>
-                    <view class='classRigTitCon'>
-                        <text class='classRigTit'>装修建材 ======> 空调采暖</text>
-                        <text class='classRigMore'>所有产品</text>
-                    </view>
-                    <view class='classRigBot'>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg1.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg2.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg3.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                    </view>
-                </view>
-                <view class='classRigCon'>
-                    <view class='classRigTitCon'>
-                        <text class='classRigTit'>装修建材</text>
-                        <text class='classRigMore'>所有产品</text>
-                    </view>
-                    <view class='classRigBot'>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg4.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg2.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg6.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                    </view>
-                </view>
-                <view class='classRigCon'>
-                    <view class='classRigTitCon'>
-                        <text class='classRigTit'>装修建材</text>
-                        <text class='classRigMore'>所有产品</text>
-                    </view>
-                    <view class='classRigBot'>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg4.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg5.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg6.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                    </view>
-                </view>
-                <view class='classRigCon'>
-                    <view class='classRigTitCon'>
-                        <text class='classRigTit'>装修建材</text>
-                        <text class='classRigMore'>所有产品</text>
-                    </view>
-                    <view class='classRigBot'>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg5.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg6.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg1.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                    </view>
-                </view>
-            </view>
+            </view> -->
         </scroll-view>
     </view>
 </view>

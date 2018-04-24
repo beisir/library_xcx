@@ -12,7 +12,20 @@ Page({
             _this.setData({
                 historical_terms: options.data
             });
-            console.log(options);
         });
+    },
+    sendKeyWord (e) {
+        let val = e.detail.value;
+        if (val!=='') {
+            wx.navigateTo({
+                url: `/pages/search-list/search-list?key=${val}`,
+            });
+        } else {
+            wx.showToast({
+                icon: 'none',
+                title: '请输入商品关键词',
+            });
+        }
     }
+
 });

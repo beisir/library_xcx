@@ -10,24 +10,10 @@
   <!-- </button>  -->
 </view>
 <view class='serviceBox'>
-  <view class="serviceList">
-    <icon class="icon1"></icon>
-    <text class="stxt">分销申请记录</text>
-  </view>
-  <view class="serviceList">
-    <icon class="icon2"></icon>
-    <text class="stxt">我的提问</text>
-  </view>
-  <view class="serviceList">
-    <icon class="icon3"></icon>
-    <text class="stxt">我的收藏</text>
-  </view>
-  <view class="serviceList">
-    <icon class="icon4"></icon>
-    <text class="stxt">常见问题</text>
-  </view>
-  <view class="serviceList">
-    <icon class="icon5"></icon>
-    <text class="stxt">关于我们</text>
-  </view>
+    <block wx:for="{{manage_arr}}" wx:key="{{item.icon}}">
+        <navigator class="serviceList" url="{{item.url}}">
+            <icon class="{{item.icon}}"></icon>
+            <text class="stxt">{{item.text}}</text>
+        </navigator>
+    </block>
 </view>

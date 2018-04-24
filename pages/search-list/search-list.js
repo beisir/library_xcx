@@ -1,66 +1,69 @@
-// pages/search-list/search-list.js
+import { ajax } from '../../utils/util.js';
+import { search_list } from '../../utils/config.js';
+// import {}
 Page({
+    data: {
+        keyword: '',
+        search_list: []
+    },
+    onLoad({ key, bcid}) {
+        const _this = this;
+        _this.setData({
+            keyword: key
+        });
+        let obj;
+        if (bcid) {
+            obj = {
+                url: search_list.prodbycat,
+                data: {
+                    catid: bcid
+                }
+            };
+        } else {
+            obj = {
+                url: search_list.prodbytitle,
+                data: {
+                    title: encodeURIComponent(key)
+                } 
+            };
+        }
+        _this.getSearchList(obj);
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
+    },
+    getSearchList (params) {
+        const _this = this;    
+        ajax(params).then(result => {
+            if (result.content.length){
+                _this.setData({
+                    search_list: result.content
+                });
+            } else {
+                _this.setData({
+                    search_list: []
+                });
+                wx.showToast({
+                    icon: 'none',
+                    title: '暂无数据'
+                });
+            };
+        });
+    },
+    sendKeyWord (e) {
+        let { value } = e.detail;
+        if (value !== ''){
+            this.getSearchList({
+                url: search_list.prodbytitle,
+                data: {
+                    title: encodeURIComponent(value)
+                }
+            });
+        } else {
+            wx.showToast({
+                icon: 'none',
+                title: '请输入商品关键词'
+            });
+        }
+        
+        console.log(e);
+    }
 })

@@ -17,8 +17,9 @@ const ajax = function (params) {
             url: params.url,
             data: params.data || {},
             header: {
-                'content-type': 'application/x-www-form-urlencoded' // 默认值
-            },
+                "Accept": "application/json, text/javascript, */*"  
+                // 'content-type': 'application/x-www-form-urlencoded' // 默认值
+            } || params.header,
             success: function (options) {
                 let result = options.data;
                 resolve(result);
@@ -56,7 +57,7 @@ function wechatLogin (callback) {
                     ajax({
                         url: app.weixin,
                         data: {
-                            js_code: res.code
+                            code: res.code
                         }
                     }).then(options => {
                         wx.setStorage({

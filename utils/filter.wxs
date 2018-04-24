@@ -1,0 +1,20 @@
+/**
+ * [DateFr filter 过滤函数专为数据渲染过滤，小程序没有专门提供的过滤的api，]
+ * [这个wxs文件是专为小程序提供过滤方法   ]
+ * [引入方式  <wxs src="../../utils/filter.wxs" module="tools" /> ]
+ * [{src: '文件的引入的路径,在wxml中引入', module： '抛出的方法名'}]
+ * [ps: 'wxs文件不支持 es6语法']
+ */
+var DateFr = {
+    /**
+     * [priceFoalt 过滤为2位浮点数]   
+     * [{num: Number(传入的价格), params:Number(传入的状态值: 0小数点之的整数, 1：返回小数点之后的小数)}]
+     */
+    priceFoalt: function (num, params) {
+        var foaltNumber = num.toFixed(2),
+            price = foaltNumber.split('.');
+        return !params ? price[0] : price[1];
+    }
+}
+
+module.exports = DateFr.priceFoalt;

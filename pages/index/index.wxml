@@ -13,7 +13,11 @@
     circular="true"
     bindchange="swiperChange">
     <block wx:for="{{swiperList}}" wx:key="{{item}}">
-        <swiper-item><image class='scrollImg' src='{{item}}'></image></swiper-item>
+        <swiper-item>
+            <navigator url="/pages/web-view/web-view?view_index={{index}}">
+                <image class='scrollImg' src='{{item}}'  />
+            </navigator>
+        </swiper-item>
     </block>
   </swiper>
   </view>

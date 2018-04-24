@@ -1,15 +1,22 @@
 <!--pages/search/search.wxml-->
 <view class='topSearch'>
-  <view class='searchCon'>
-    <input placeholder-class="phcolor" type='text' placeholder='请输入商品关键字' />
-    <view class='cancelBtn'>取消</view>
-  </view>
+    <view class='searchCon'>
+        <input 
+            type='text'
+            placeholder-class="phcolor"
+            placeholder='请输入商品关键字'
+            focus="true"
+            maxlength="50"
+            confirm-type="搜索"
+            bindconfirm="sendKeyWord"/>
+        <view class='cancelBtn'>取消</view>
+    </view>
 </view>
 <view class='seaHistory'>
-  <text>历史搜索</text>
-  <view class='seaHistoryCon'>
-    <block wx:for="{{historical_terms}}" wx:key="{{item}}">
-        <view class='seaWord'>{{item}}</view>
-    </block>
-  </view>
+    <text>历史搜索</text>
+    <view class='seaHistoryCon'>
+        <block wx:for="{{historical_terms}}" wx:key="{{item}}">
+            <view class='seaWord'>{{item}}</view>
+        </block>
+    </view>
 </view>

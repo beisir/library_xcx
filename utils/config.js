@@ -6,13 +6,25 @@ const config = {
 
 module.exports = {
     app: {
-        weixin: `https://api.weixin.qq.com/sns/jscode2session?appid=${config.APPID}&secret=${config.SECRET}&grant_type=authorization_code`
+        
+        weixin: `https://testwx.hc360.com/mobileapp/transfer/proLogin`
+        // weixin: `https://api.weixin.qq.com/sns/jscode2session?appid=${config.APPID}&secret=${config.SECRET}&grant_type=authorization_code`
     },
     search: {
         historical: 'https://www.easy-mock.com/mock/5add78830f34ce6a67b6b97b/search'
     },
     classy: {
-        // prodcategory: 'http://10.158.33.187/get/prodcategory'
-        prodcategory: 'https://www.easy-mock.com/mock/5add78830f34ce6a67b6b97b/project'
-    }
+        prodcategory: `http://wsprod.hc360.com/get/prodcategory`
+    },
+    search_list: {
+        // prodbycat: 'http://wsprod.hc360.com/get/prodbycat',
+        prodbycat: `http://10.158.33.180:8000/prodbycat.json`,
+        // prodbycat: `https://www.easy-mock.com/mock/5add78830f34ce6a67b6b97b/prodbycat`,
+        prodbytitle: `http://wsprod.hc360.com/get/prodbytitle`
+    },
+    detail: {
+        prodinfo: `http://wsprod.hc360.com/get/prodinfo`
+    },
+    errImg: 'https://style.org.hc360.com/images/microMall/program/proGimg.png'
+    
 }

@@ -1,14 +1,21 @@
 <!--pages/search/search-list.wxml-->
 <view class='topSearch'>
-  <view class='searchCon'>
-    <input placeholder-class="phcolor" type='text' placeholder='请输入商品关键字' focus="{{true}}" />
-  </view>
+    <view class='searchCon'>
+        <input 
+            type='text' 
+            placeholder-class="phcolor"
+            maxlength="50"
+            confirm-type="搜索"
+            bindconfirm="sendKeyWord"
+            placeholder='请输入商品关键字'
+            value="{{keyword}}"/>
+    </view>
 </view>
 <view class='box1'>
-  <productList></productList>
-  <view class="more">
-    <view class='lineBot'>
-      <text class='textBot'>没有更多了</text>
+    <productList search_list="{{search_list}}"></productList>
+    <view class="more">
+        <view class='lineBot'>
+            <text class='textBot'>没有更多了</text>
+        </view>
     </view>
-  </view>
 </view>
