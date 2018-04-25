@@ -1,10 +1,10 @@
 <wxs src="../../utils/filter.wxs" module="tools" />
 <!-- <view class='tabTitBox'>
-  <view class='tabTit'><text class='cur'>综述</text></view>
-  <view class='tabTit'><text>报价</text></view>
-  <view class='tabTit'><text>资讯</text></view>
-  <view class='tabTit'><text>问答</text></view>
-</view>   -->
+    <view class='tabTit'><text class='cur'>综述</text></view>
+    <view class='tabTit'><text>报价</text></view>
+    <view class='tabTit'><text>资讯</text></view>
+    <view class='tabTit'><text>问答</text></view>
+</view>    -->
 <view class="proImgBox">
     <view>
         <swiper class="swiper"
@@ -30,149 +30,176 @@
         <view class="proTitle">{{prodinfo.name}}</view>
         <view class="proPrice">
             <text class="proPriceText">￥</text>{{tools(prodinfo.price,0)}}.<text class="proPriceText">{{tools(prodinfo.price,1)}}</text> 
-            <button type='button' class='contrast'>对比</button>
-            <button type='button'>产品说明书</button>
+            <!-- <button type='button' class='contrast'>对比</button>
+            <button type='button'>产品说明书</button>  -->
         </view>
     </view>
     <button class="shareBox" open-type="share">分享</button>
 </view>
 
-<view class='detailBox'>
+<view class='detailBox' wx:if="{{prodatt_arr.length}}">
     <view class='detailTit'>常固M20详细参数</view>
     <view class='parameterBoxCon'>
-        <view class='parameterListCon'>
-            <view class='parameterLeft'><text>产品参数</text></view>
-            <view class='parameterRig'>
-                <block wx:for="{{prodatt}}" wx:key="{{item.attName}}">
-                    <view class='parameterList'>
-                        <text class='pLeft'>{{item.attName}}</text>
-                        <text class='pRig'>{{item.attValue}}</text>
-                    </view>
-                </block>
+        <block wx:for="{{prodatt_arr}}" wx:key="{{item}}">
+            <view class='parameterListCon'>
+                <view class='parameterLeft'><text>{{item}}</text></view>
+                <view class='parameterRig'>
+                    <block wx:for="{{prodatt[item]}}" wx:for-item="childItem" wx:key="{{childItem.attName}}">
+                        <view class='parameterList'>
+                            <text class='pLeft'>{{childItem.attName}}</text>
+                            <text class='pRig'>{{childItem.attValue}}</text>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+
+<!-- 报价 -->
+<!-- <view class='detailBox'>
+    <view class='detailTit'>供应商报价</view>
+    <view class='bjBoxCon'>
+        <view class='bjBoxList'>
+            <view class='bjName'>
+                <text class='bjNameLeft'>永年县西苏乡孔村国磊紧固件加工厂</text>
+                <view class='bjPrice'>
+                    <text class="proPriceText">￥</text>3880.<text class="proPriceText">00</text>
+                </view>
+            </view>
+            <view class='bjNameBot'>
+                <text class='bjBotState'>分期</text>
+                <text class='bjBotAddress'>河北</text>
+                <text class='bjBotScore'>综合评分：9.8</text>
+                <button class='telBtn'>电话咨询</button>
+            </view>
+        </view>
+        <view class='bjBoxList'>
+            <view class='bjName'>
+                <text class='bjNameLeft'>永年县西苏乡孔村国磊紧固件加工厂</text>
+                <view class='bjPrice'>
+                    <text class="proPriceText">￥</text>3880.<text class="proPriceText">00</text>
+                </view>
+            </view>
+            <view class='bjNameBot'>
+                <text class='bjBotState'>分期</text>
+                <text class='bjBotAddress'>河北</text>
+                <text class='bjBotScore'>综合评分：9.8</text>
+                <button class='telBtn'>电话咨询</button>
+            </view>
+        </view>
+        <view class='bjBoxList'>
+            <view class='bjName'>
+                <text class='bjNameLeft'>永年县西苏乡孔村国磊紧固件加工厂永年县西苏乡孔村国磊紧固件加工厂</text>
+                <view class='bjPrice'>
+                    <text class="proPriceText">￥</text>3880.<text class="proPriceText">00</text>
+                </view>
+            </view>
+            <view class='bjNameBot'>
+                <text class='bjBotState'>分期</text>
+                <text class='bjBotAddress'>河北</text>
+                <text class='bjBotScore'>综合评分：9.8</text>
+                <button class='telBtn'>电话咨询</button>
+            </view>
+        </view>
+        <view class='moreBtn'>更多报价</view>
+    </view> 
+</view> -->
+
+<!-- 资讯 -->
+<!-- <view class='detailBox'>
+    <view class='detailTit'>相关资讯</view>
+    <view class='newsListCon'>
+        <view class='newsList'>
+            <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
+            <text class='newsTime'>2018-04-16  18:12:23</text>
+            <view class='newsImg'>
+                <image src='https://192.168.120.32/images/microMall/program/aimg2.jpg' />
+            </view>
+        </view>
+        <view class='newsList'>
+            <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
+            <text class='newsTime'>2018-04-16  18:12:23</text>
+            <view class='newsImg'>
+                <image src='https://192.168.120.32/images/microMall/program/aimg2.jpg' />
+            </view>
+        </view>
+        <view class='newsList'>
+            <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
+            <text class='newsTime'>2018-04-16  18:12:23</text>
+            <view class='newsImg'>
+                <image src='https://192.168.120.32/images/microMall/program/aimg2.jpg' />
+            </view>
+        </view>
+        <view class='newsList noImg'>
+            <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
+            <text class='newsTime'>2018-04-16  18:12:23</text>
+        </view>
+        <view class='moreBtn'>更多资讯</view>
+    </view>
+</view> -->
+
+<!-- 产品问答 -->
+<!-- <view class='detailBox'>
+    <view class='detailTit'>产品问答<text class='askBtn'>提问</text></view>
+    <view class='askBoxCon'>
+        <view class='askList'>
+            <view class='askName'>桌子能用吗？</view>
+            <view class='answerCon'>
+                <text class='answerConLeft'>桌子还可以桌子还可以</text>
+                <text class='answerConRig'>2个回答</text>
+            </view>
+        </view>
+        <view class='askList'>
+            <view class='askName'>桌子能用吗？</view>
+            <view class='answerCon'>
+                <text class='answerConLeft'>桌子还可以桌子还可以</text>
+                <text class='answerConRig'>2个回答</text>
+            </view>
+        </view>
+        <view class='askList'>
+            <view class='askName'>桌子能用吗？</view>
+            <view class='answerCon'>
+                <text class='answerConLeft'>桌子还可以桌子还可以桌子还可以桌子还可以桌子还可以桌子还可以桌子还可以？</text>
+                <text class='answerConRig'>2个回答</text>
+            </view>
+        </view>
+        <view class='moreBtn'>更多回答</view>
+    </view>
+</view> -->
+
+<!-- 商品列表 -->
+<!-- <view class='box2'>
+    <view class='box2Tit'>
+        <text>同类推荐</text>
+    </view>
+    <view class='proList'>
+        <view class='proCon'>
+            <view class='proImgCon'>
+                <image class='proImg' src='https://192.168.120.32/images/microMall/program/proGimg.png' />
+            </view>  
+            <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
+            <view class='price'>
+                ￥<text class='allprice'>168.</text>00
+            </view>
+        </view>
+        <view class='proCon'>
+            <view class='proImgCon'>
+                <image class='proImg' src='https://192.168.120.32/images/microMall/program/aimg2.jpg' />
+            </view>
+            <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
+            <view class='price'>
+                ￥<text class='allprice'>168.</text>00
             </view>
         </view>
     </view>
-</view>
-<!-- <view class='detailBox'>
-  <view class='detailTit'>供应商报价</view>
-  <view class='bjBoxCon'>
-    <view class='bjBoxList'>
-      <view class='bjName'><text class='bjNameLeft'>永年县西苏乡孔村国磊紧固件加工厂</text><view class='bjPrice'><text class="proPriceText">￥</text>3880.<text class="proPriceText">00</text></view></view>
-      <view class='bjNameBot'>
-        <text class='bjBotState'>分期</text><text class='bjBotAddress'>河北</text><text class='bjBotScore'>综合评分：9.8</text><button class='telBtn'>电话咨询</button>
-      </view>
-    </view>
-    <view class='bjBoxList'>
-      <view class='bjName'><text class='bjNameLeft'>永年县西苏乡孔村国磊紧固件加工厂</text><view class='bjPrice'><text class="proPriceText">￥</text>3880.<text class="proPriceText">00</text></view></view>
-      <view class='bjNameBot'>
-        <text class='bjBotState'>分期</text><text class='bjBotAddress'>河北</text><text class='bjBotScore'>综合评分：9.8</text><button class='telBtn'>电话咨询</button>
-      </view>
-    </view>
-    <view class='bjBoxList'>
-      <view class='bjName'><text class='bjNameLeft'>永年县西苏乡孔村国磊紧固件加工厂永年县西苏乡孔村国磊紧固件加工厂</text><view class='bjPrice'><text class="proPriceText">￥</text>3880.<text class="proPriceText">00</text></view></view>
-      <view class='bjNameBot'>
-        <text class='bjBotState'>分期</text><text class='bjBotAddress'>河北</text><text class='bjBotScore'>综合评分：9.8</text><button class='telBtn'>电话咨询</button>
-      </view>
-    </view>
-    <view class='moreBtn'>更多报价</view>
-  </view>
-</view> -->
-<!-- <view class='detailBox'>
-  <view class='detailTit'>相关资讯</view>
-  <view class='newsListCon'>
-    <view class='newsList'>
-      <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
-      <text class='newsTime'>2018-04-16  18:12:23</text>
-      <view class='newsImg'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image></view>
-    </view>
-    <view class='newsList'>
-      <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
-      <text class='newsTime'>2018-04-16  18:12:23</text>
-      <view class='newsImg'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image></view>
-    </view>
-    <view class='newsList'>
-      <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
-      <text class='newsTime'>2018-04-16  18:12:23</text>
-      <view class='newsImg'><image src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image></view>
-    </view>
-    <view class='newsList noImg'>
-      <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
-      <text class='newsTime'>2018-04-16  18:12:23</text>
-    </view>
-    <view class='moreBtn'>更多资讯</view>
-  </view>
-</view> -->
-<!-- <view class='detailBox'>
-  <view class='detailTit'>产品问答<text class='askBtn'>提问</text></view>
-  <view class='askBoxCon'>
-    <view class='askList'>
-      <view class='askName'>桌子能用吗？</view>
-      <view class='answerCon'><text class='answerConLeft'>桌子还可以桌子还可以</text><text class='answerConRig'>2个回答</text></view>
-    </view>
-    <view class='askList'>
-      <view class='askName'>桌子能用吗？</view>
-      <view class='answerCon'><text class='answerConLeft'>桌子还可以桌子还可以</text><text class='answerConRig'>2个回答</text></view>
-    </view>
-    <view class='askList'>
-      <view class='askName'>桌子能用吗？</view>
-      <view class='answerCon'><text class='answerConLeft'>桌子还可以桌子还可以桌子还可以桌子还可以桌子还可以桌子还可以桌子还可以？</text><text class='answerConRig'>2个回答</text></view>
-    </view>
-    <view class='moreBtn'>更多回答</view>
-  </view>
-</view> -->
-<!-- <view class='box2'>
-  <view class='box2Tit'><text>同类推荐</text></view>
-  <view class='proList'>
-    <view class='proCon'>
-      <view class='proImgCon'><image class='proImg' src='https://192.168.120.32/images/microMall/program/proGimg.png'></image></view>  
-      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
-      <view class='price'>
-        ￥<text class='allprice'>168.</text>00
-      </view>
-    </view>
-    <view class='proCon'>
-      <view class='proImgCon'><image class='proImg' src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image></view>
-      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
-      <view class='price'>
-        ￥<text class='allprice'>168.</text>00
-      </view>
-    </view>
-    <view class='proCon'>
-      <view class='proImgCon'><image class='proImg' src='https://192.168.120.32/images/microMall/program/aimg3.jpg'></image></view>
-      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
-      <view class='price'>
-        ￥<text class='allprice'>168.</text>00
-      </view>
-    </view>
-    <view class='proCon'>
-      <view class='proImgCon'><image class='proImg' src='https://192.168.120.32/images/microMall/program/aimg4.jpg'></image></view>
-      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
-      <view class='price'>
-        ￥<text class='allprice'>168.</text>00
-      </view>
-    </view>
-    <view class='proCon'>
-      <view class='proImgCon'><image class='proImg' src='https://192.168.120.32/images/microMall/program/aimg2.jpg'></image></view>
-      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
-      <view class='price'>
-        ￥<text class='allprice'>168.</text>00
-      </view>
-    </view>
-    <view class='proCon'>
-      <view class='proImgCon'><image class='proImg' src='https://192.168.120.32/images/microMall/program/aimg3.jpg'></image></view>
-      <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
-      <view class='price'>
-        ￥<text class='allprice'>168.</text>00
-      </view>
-    </view>
-  </view>
-</view> -->
+</view>  -->
 
 <view class='botFixed'>
-  <view class='botTel'>咨询</view>
-  <view class='collectionIco' style='display:none;'>收藏</view><view class='collectionIcoCur'>收藏</view>
-  <view class='botBtn1'>下载铺货</view>
-  <view class='botBtn2'>申请分销</view>
+    <view class='botTel' bindtap="consultingPhone">咨询</view>
+    <!-- <view class='collectionIco' style='display:none;'>收藏</view><view class='collectionIcoCur'>收藏</view> -->
+    <!-- <view class='botBtn1'>下载铺货</view> -->
+    <view class='botBtn2' bindtap="application">申请分销</view>
 </view>
 
-<view class='fixedBtn'>5</view>
+<!-- <view class='fixedBtn'>5</view> -->

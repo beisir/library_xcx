@@ -1,14 +1,12 @@
-<!--pages/personCenter/index.wxml-->
 <view class="signBox">
-  <view class='signLogo'>
-    <image class="logoImg" src="{{userInfo.avatarUrl}}"></image>
-  </view>
-  <!-- <button open-type="getUserInfo" bindgetuserinfo="userInfoHandler"> -->
+    <view class='signLogo'>
+        <image class="logoImg" src="{{userInfo.avatarUrl}}"></image>
+    </view>
     <text class='signName'>{{userInfo.nickName}}</text>
     <text class='signClass'>实体店主</text>
     <button class="user-btn" open-type="getUserInfo" bindgetuserinfo="userInfoHandler"></button>
-  <!-- </button>  -->
 </view>
+
 <view class='serviceBox'>
     <block wx:for="{{manage_arr}}" wx:key="{{item.icon}}">
         <navigator class="serviceList" url="{{item.url}}">

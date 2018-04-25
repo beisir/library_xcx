@@ -15,7 +15,9 @@
     <productList search_list="{{search_list}}"></productList>
     <view class="more">
         <view class='lineBot'>
-            <text class='textBot'>没有更多了</text>
+            <text class='textBot' wx:if="{{loadingTxt == 'drop'}}">下拉加载</text>
+            <text class='textBot' wx:elif="{{loadingTxt == 'load'}}">正在加载...</text>
+            <text class='textBot' wx:elif="{{loadingTxt == 'more'}}">没有更多了</text>
         </view>
     </view>
 </view>

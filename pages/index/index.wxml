@@ -1,66 +1,75 @@
 <!--index.wxml-->
 <view class='topSearch'>
-  <view class='searchCon'>
-     <navigator class="input" url="/pages/search/search">请输入商品关键字</navigator>
-     <!-- <view class="" bindtap="goSearchPage">请输入商品关键字</view>      -->
-     <!-- <input placeholder-class="phcolor" type='text' placeholder='请输入商品关键字'  />  -->
-  </view>
+    <view class='searchCon'>
+        <navigator class="input" url="/pages/search/search">请输入商品关键字</navigator>
+        <!-- <view class="" bindtap="goSearchPage">请输入商品关键字</view>      -->
+        <!-- <input placeholder-class="phcolor" type='text' placeholder='请输入商品关键字'  />  -->
+    </view>
 </view>
+
 <view class='scroll'>
-  <view class='scrollCon'>
-  <swiper 
-    autoplay="true"
-    circular="true"
-    bindchange="swiperChange">
-    <block wx:for="{{swiperList}}" wx:key="{{item}}">
-        <swiper-item>
-            <navigator url="/pages/web-view/web-view?view_index={{index}}">
-                <image class='scrollImg' src='{{item}}'  />
-            </navigator>
-        </swiper-item>
-    </block>
-  </swiper>
-  </view>
-  <view class='scrollIco'>
-    <block wx:for="{{swiperList}}" wx:key="{{item}}">
-        <icon class="{{index === swiperActive ? 'cur': ''}}"></icon>    
-    </block>
-  </view>
-</view>
-<view class='navBox'>
-  <view class="navTit"><icon class='ico1'></icon><text>装修建材</text></view>
-  <view class="navTit"><icon class='ico2'></icon><text>五金工具</text></view>
-  <view class="navTit"><icon class='ico3'></icon><text>建筑保温</text></view>
-  <view class="navTit"><icon class='ico4'></icon><text>管材管件</text></view>
-</view>
-<!-- vertical -->
-<view class='hcNewsList'>
-  <icon class='newsIco'></icon>
-  <view class='newsListCon'>
-    <swiper 
-        class="swiper"
-        vertical="true"
-        autoplay="true"
-        next-margin="0"
-        circular="true"
-        duration="1000"
-        interval="2000"
-        display-multiple-items="2">
-        <block wx:for="{{hotTxt}}" wx:key="{{item}}">
-            <swiper-item class="swiper-item">
-                <view class='list'>
-                    <view class='hotIco'>HOT</view>
-                    <text>响应建筑节能大潮设计成趋势响应建筑节能大趋势响应建筑节能大</text>
-                </view>
-            <view class='list'><view class='hotIco'>HOT</view><text>响应建筑节能大潮设计成趋势响应建筑</text></view>   
-            </swiper-item>
+    <view class='scrollCon'>
+        <swiper 
+            autoplay="true"
+            circular="true"
+            bindchange="swiperChange">
+            <block wx:for="{{swiperList}}" wx:key="{{item}}">
+                <swiper-item>
+                    <navigator url="/pages/web-view/web-view?view_index={{index}}">
+                        <image class='scrollImg' src='{{item}}' />
+                    </navigator>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class='scrollIco'>
+        <block wx:for="{{swiperList}}" wx:key="{{item}}">
+            <icon class="{{index === swiperActive ? 'cur': ''}}"></icon>    
         </block>
-    </swiper>
-  </view>
+    </view>
 </view>
+
+<view class='navBox'>
+    <block wx:for="{{hotTab}}" wx:key="{{item.icon}}">
+        <navigator class="navTit" hover-class="none" url="/pages/search-list/search-list?supcatid={{item.supcatid}}">
+            <icon class='{{item.icon}}'></icon>
+            <text>{{item.text}}</text>
+        </navigator>      
+    </block>
+</view>
+
+<!-- vertical -->
+<!-- <view class='hcNewsList'>
+    <icon class='newsIco'></icon>
+    <view class='newsListCon'>
+        <swiper 
+            class="swiper"
+            vertical="true"
+            autoplay="true"
+            next-margin="0"
+            circular="true"
+            duration="1000"
+            interval="2000"
+            display-multiple-items="2">
+            <block wx:for="{{hotTxt}}" wx:key="{{item}}">
+                <swiper-item class="swiper-item">
+                    <view class='list'>
+                        <view class='hotIco'>HOT</view>
+                        <text>响应建筑节能大潮设计成趋势响应建筑节能大趋势响应建筑节能大</text>
+                    </view>
+                <view class='list'><view class='hotIco'>HOT</view><text>响应建筑节能大潮设计成趋势响应建筑</text></view>   
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</view> -->
+
 <view class='box1'>
-  <view class='box1Tit'><text>大家都在看</text><view class='moreLink'>更多</view></view>
-  <productList></productList>  
+    <view class='box1Tit'>
+        <text>大家都在看</text>
+        <!-- <view class='moreLink'>更多</view> -->
+    </view>
+    <productList search_list="{{search_list}}"></productList>  
 </view>
 <!-- <view class='box2'>
   <view class='box2Tit'><text>为你推荐</text><view class='moreLink'>更多</view></view>

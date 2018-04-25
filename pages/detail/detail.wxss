@@ -66,13 +66,13 @@ button.contrast{background:url(https://192.168.120.32/images/cpk/cpkIndexIco.png
 .box2Tit{padding:16rpx 0 42rpx; position: relative;}
 .phcolor{color:#ccc;}
 .botFixed{ position:fixed; bottom: 0; width: 100%; left: 0; height: 98rpx; background: #fff; box-shadow:0rpx 0rpx 20rpx #bbb;}
-.botTel,.collectionIco,.collectionIcoCur{ float: left; width: 16%; text-align: center;height: 98rpx; font-size: 22rpx; padding-top: 10rpx;}
+.botTel,.collectionIco,.collectionIcoCur{ float: left; /*width: 16%;*/width: 30%; text-align: center;height: 98rpx; font-size: 22rpx; padding-top: 10rpx;}
 .botTel::before,.collectionIco::before,.collectionIcoCur::before{ content: ""; display: block; margin: 0 auto; height: 45rpx; width: 45rpx;background:url(https://192.168.120.32/images/cpk/cpkIndexIco.png) 0 0 no-repeat; background-size: 300rpx 600rpx;}
 .botTel::before{ background-position:-58rpx -252rpx;}
 .collectionIco::before{background-position:-109rpx -252rpx;}
 .collectionIcoCur{color:#ef322c;}
 .collectionIcoCur::before{background-position:-160rpx -252rpx;}
-.botBtn1,.botBtn2{ float: left; width: 34%; text-align: center; font-size: 30rpx; line-height: 98rpx; color: #fff;}
+.botBtn1,.botBtn2{ float: left; /*width: 34%;*/width: 70%; text-align: center; font-size: 30rpx; line-height: 98rpx; color: #fff;}
 .botBtn1{ background: #fca000;}
 .botBtn2{ background: #ef322c;}
 .noImg .newsName{width:100%;}

@@ -2,12 +2,18 @@ import { ajax } from '../../utils/util.js';
 import { classy } from '../../utils/config.js';
 Page({
     data: {
-        scrollTop: 0,
-        asideCur: 0,
-        asideTtile: [],
-        domeArr: [],
-        contentArr: []
+        title: '',      // 显示所有产品右侧的标题文字
+        title_supid: '',// 所有产品的商机id
+        asideCur: 0,    // 侧边栏tabIndex
+        asideTtile: [], // 侧边栏数据列表
+        contentArr: []  // 右边content数据列表
+        // scrollTop: 0,   // 
     },
+    /**
+     * [onLoad() 初始调用数据]
+     * [ps: 先获取第一级侧边栏菜单,成功之后获取二级数据列表]
+     * [-------------------------------------------------]
+     */
     onLoad () {
         const _this = this;
         _this.getLevelMenu('001').then(list => {
@@ -15,22 +21,28 @@ Page({
                 _this.setData({
                     asideTtile: list
                 });
-                _this.getLevelMenu(list[0].supcatid).then(result => {
+                _this.getLevelMenu(list[0].supcatid, true).then(result => {
                     _this.setData({
                         contentArr: result,
-                        title: list[0].supcatname
+                        title: list[0].supcatname,
+                        title_supid: list[0].supcatid
                     });
                 });
             };
         })
     },
-    getLevelMenu (params) {
+    /**
+     * [getLevelMenu() 获取分类列表]
+     * [ps: 先获取第一级侧边栏菜单,成功之后获取二级数据列表]
+     * [-------------------------------------------------]
+     */
+    getLevelMenu (params, isLoading) {
         return ajax({
             url: classy.prodcategory,
             data: {
                 itemid: params
             }
-        });
+        }, isLoading);
     },
     selectAside (e) {
         const _this = this;
@@ -39,9 +51,10 @@ Page({
             _this.setData({
                 contentArr: list,
                 title: title,
-                asideCur: index
-            })
-        });
+                asideCur: index,   // 侧边栏tabIndexdex,
+                title_supid: supcatid   // 侧边栏数据列表
+            });
+        }); // 右边content数据列表
     }
 
 
@@ -101,10 +114,9 @@ Page({
     //     let domeArr = _this.data.domeArr;
     //     let { index, supcatid, id } = e.target.dataset;
     //     _this.setData({
-    //         asideCur: index,
-    //         scrollTop: domeArr[index],
-    //         stopScroll: true
-    //     });
+    //         asideCur: in // 侧边栏tabIndexdex,
+    //         scrollTop: domeArr[index],   // 侧边栏数据列表
+    //     });  // 右边content数据列表
     // },
     // scrollChange (e) {
     //     // console.log(e);
@@ -120,8 +132,7 @@ Page({
     //         let len = minarr.length === rects.length ? rects.length - 1 : minarr.length;
     //         // console.log(len)
     //         _this.setData({
-    //             asideCur: len
-    //         });
-    //     }).exec();
-    // }
+    //             asideCur: le // 侧边栏tabIndexn
+    //         });  // 侧边栏数据列表
+    // }    // 右边content数据列表
 });

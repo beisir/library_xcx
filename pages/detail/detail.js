@@ -1,28 +1,32 @@
-import { ajax } from '../../utils/util.js';
+import { ajax, AuthorIzation, wechatLogin} from '../../utils/util.js';
 import { detail } from '../../utils/config.js';
 Page({
     data: {
-        prodatt: [],
+        prodatt_arr: [],
+        prodatt: {},
         prodimage: [],
         prodinfo: {
             price: 0
-        }
+        },
+        phoneNum: '010-xxxxxxxx',
+        applicationId: ''
     },
     onLoad ({id}) {
         const _this = this;
         ajax({
             url: detail.prodinfo,
-            data: {id: id},
+            data: {id: 1},
         }).then(result => {
             _this.setData({
+                prodatt_arr: Object.keys(result.prodatt),
                 prodatt: result.prodatt,
                 prodimage: result.prodimage,
-                prodinfo: result.prodinfo
+                prodinfo: result.prodinfo,
+                phoneNum: result.mfbo.tel,
+                applicationId: result.mfbo.id
             });
         });
     },
-
-
     imgInfo(e) {
         let index = e.currentTarget.dataset.index,
             prodimage = this.data.prodimage;
@@ -33,11 +37,43 @@ Page({
             urls: img_arr // 需要预览的图片http链接列表
         });
     },
-
     /**
-   * [onShareAppMessage() 分享]
-   * [-------------------------------------------------]
-   */
+     * [application() ]
+     * [申请分销 ]
+     * [-------------------------------------------------]
+     */
+    application () {
+        const _this = this;
+        let {prodimage, prodinfo} = _this.data;
+        // wechatLogin(({openid}) => {
+        //     ajax({
+        //         url: '',
+        //         data: {
+        //             prodimage :prodimage[0].name,
+        //             prodinfoName: prodinfo.name,
+        //             prodinfoPrice: prodinfo.price,
+        //             openid: openid
+        //         }
+        //     }).then(res => {
+        //         console.log(res);
+        //     });
+        // });
+    },
+    /**
+     * [consultingPhone() ]
+     * [ps: 咨询电话 ]
+     * [-------------------------------------------------]
+     */
+    consultingPhone () {
+        let phoneNum = this.data.phoneNum;
+        wx.makePhoneCall({
+            phoneNumber: phoneNum,
+        });
+    },
+    /**
+     * [onShareAppMessage() 分享]
+     * [-------------------------------------------------]
+     */
     onShareAppMessage: function (options) {
         const _this = this;
         let { prodinfo, prodimage } = _this.data,

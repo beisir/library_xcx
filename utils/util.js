@@ -6,12 +6,13 @@ import { app } from './config.js';
  * [{params: Object(url.. data.. 等参数)}]
  * [-------------------------------------------------]
  */
-const ajax = function (params) {
+const ajax = function (params, isLoading = false) {
     return new Promise(function (resolve, reject) {
-        wx.showLoading({
+        !isLoading && wx.showLoading({
             title: '正在加载...',
             mask: true
         });
+        wx.showNavigationBarLoading();
         wx.request({
             method: params.method || 'GET',
             url: params.url,
@@ -36,7 +37,8 @@ const ajax = function (params) {
                 })
             },
             complete: function () {
-                wx.hideLoading();
+                wx.hideNavigationBarLoading();
+                !isLoading && wx.hideLoading();
             }
         });
     });

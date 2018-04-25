@@ -9,8 +9,8 @@ Page({
             {
                 icon: 'icon1',
                 text: '分销申请记录',
-                url: ''
-            },{
+                url: '/pages/distribution/distribution'
+            },/*{
                 icon: 'icon2',
                 text: '我的提问',
                 url: ''                
@@ -18,7 +18,7 @@ Page({
                 icon: 'icon3',
                 text: '我的收藏',
                 url: '/pages/collection/collection'
-            },{
+            },*/{
                 icon: 'icon4',
                 text: '常见问题',
                 url: '/pages/problems/problems'
