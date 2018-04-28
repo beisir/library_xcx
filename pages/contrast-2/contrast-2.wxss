@@ -1,7 +1,7 @@
 /* pages/contrast-2/contrast-2.wxss */
 .contrastProTop{ overflow: hidden; height: 200rpx; background:#fff; margin-bottom:20rpx;}
 .vsCon{ width: 200rpx; height: 145rpx; text-align: center; background: #eee; padding-top:56rpx; font-size: 28rpx; float: left;}
-.vsCon::before{ content:""; display:block; margin: 0 auto 20rpx; height:54rpx; width:70rpx;background:url(https://192.168.120.32/images/cpk/cpkIndexIco.png) -231rpx -421rpx no-repeat;background-size:300rpx 600rpx;}
+.vsCon::before{ content:""; display:block; margin: 0 auto 20rpx; height:54rpx; width:70rpx;background:url(https://style.org.hc360.com/images/cpk/cpkIndexIco.png) -231rpx -421rpx no-repeat;background-size:300rpx 600rpx;}
 .contrastProRig{float: left; width: calc(100% - 200rpx);}
 .pro1,.pro2{width: 50%; margin: 0 auto; float: left; padding-top: 20rpx;}
 .pro1Img,.pro2Img,.pro1Img image,.pro2Img image{width:120rpx; height:120rpx; margin: 0 auto;}

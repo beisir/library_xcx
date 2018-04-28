@@ -19,25 +19,22 @@
             scroll-top="{{scrollTop}}"
             bindscroll="scrollChange">
             <view class="class-container">
-                <block>
-                    <view class='classRigCon'>
-                        <view class='classRigTitCon'>
-                            <text class='classRigTit'>{{title}}</text>
-                            <navigator class='classRigMore' 
-                                url="/pages/search-list/search-list?supcatid={{title_supid}}">所有产品</navigator>                            
-                        </view>
-                        <view class='classRigBot'>
-                        {{JSON.stringify(contentArr)}}
-                            <block wx:for="{{contentArr}}" wx:for-item="childitem" wx:key="{{childitem.supcatname}}">
-                                 <navigator class='classLink'
-                                    url="/pages/search-list/search-list?bcid={{childitem.catid}}&key={{childitem.supcatname}}">
-                                    <image src='https://192.168.120.32/images/cpk/classImg1.jpg'></image>
-                                    <text>{{childitem.supcatname}}</text>
-                                </navigator> 
-                            </block>
-                        </view>
+                <view class='classRigCon'>
+                    <view class='classRigTitCon'>
+                        <text class='classRigTit'>{{title}}</text>
+                        <navigator class='classRigMore' 
+                            url="/pages/search-list/search-list?supcatid={{title_supid}}">所有产品</navigator>                            
                     </view>
-                </block>
+                    <view class='classRigBot'>
+                        <block wx:for="{{contentArr}}" wx:for-item="childitem" wx:key="{{childitem.supcatname}}">
+                                <navigator class='classLink'
+                                url="/pages/search-list/search-list?bcid={{childitem.catid}}&key={{childitem.supcatname}}">
+                                <image src='{{childitem.catLogo}}'></image>
+                                <text>{{childitem.supcatname}}</text>
+                            </navigator> 
+                        </block>
+                    </view>
+                </view>
             </view> 
 
 
@@ -51,35 +48,15 @@
                     </view>
                     <view class='classRigBot'>
                         <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg1.jpg'></image>
+                            <image src='https://style.org.hc360.com/images/cpk/classImg1.jpg'></image>
                             <text>电梯</text>
                         </view>
                         <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg2.jpg'></image>
+                            <image src='https://style.org.hc360.com/images/cpk/classImg2.jpg'></image>
                             <text>电梯</text>
                         </view>
                         <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg3.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                    </view>
-                </view>
-                <view class='classRigCon'>
-                    <view class='classRigTitCon'>
-                        <text class='classRigTit'>装修建材</text>
-                        <text class='classRigMore'>所有产品</text>
-                    </view>
-                    <view class='classRigBot'>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg4.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg2.jpg'></image>
-                            <text>电梯</text>
-                        </view>
-                        <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg6.jpg'></image>
+                            <image src='https://style.org.hc360.com/images/cpk/classImg3.jpg'></image>
                             <text>电梯</text>
                         </view>
                     </view>
@@ -91,15 +68,15 @@
                     </view>
                     <view class='classRigBot'>
                         <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg4.jpg'></image>
+                            <image src='https://style.org.hc360.com/images/cpk/classImg4.jpg'></image>
                             <text>电梯</text>
                         </view>
                         <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg5.jpg'></image>
+                            <image src='https://style.org.hc360.com/images/cpk/classImg2.jpg'></image>
                             <text>电梯</text>
                         </view>
                         <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg6.jpg'></image>
+                            <image src='https://style.org.hc360.com/images/cpk/classImg6.jpg'></image>
                             <text>电梯</text>
                         </view>
                     </view>
@@ -111,15 +88,35 @@
                     </view>
                     <view class='classRigBot'>
                         <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg5.jpg'></image>
+                            <image src='https://style.org.hc360.com/images/cpk/classImg4.jpg'></image>
                             <text>电梯</text>
                         </view>
                         <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg6.jpg'></image>
+                            <image src='https://style.org.hc360.com/images/cpk/classImg5.jpg'></image>
                             <text>电梯</text>
                         </view>
                         <view class='classLink'>
-                            <image src='https://192.168.120.32/images/cpk/classImg1.jpg'></image>
+                            <image src='https://style.org.hc360.com/images/cpk/classImg6.jpg'></image>
+                            <text>电梯</text>
+                        </view>
+                    </view>
+                </view>
+                <view class='classRigCon'>
+                    <view class='classRigTitCon'>
+                        <text class='classRigTit'>装修建材</text>
+                        <text class='classRigMore'>所有产品</text>
+                    </view>
+                    <view class='classRigBot'>
+                        <view class='classLink'>
+                            <image src='https://style.org.hc360.com/images/cpk/classImg5.jpg'></image>
+                            <text>电梯</text>
+                        </view>
+                        <view class='classLink'>
+                            <image src='https://style.org.hc360.com/images/cpk/classImg6.jpg'></image>
+                            <text>电梯</text>
+                        </view>
+                        <view class='classLink'>
+                            <image src='https://style.org.hc360.com/images/cpk/classImg1.jpg'></image>
                             <text>电梯</text>
                         </view>
                     </view>

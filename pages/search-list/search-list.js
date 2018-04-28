@@ -12,7 +12,9 @@ Page({
         prodbysupid_path: '', 
         loadingTxt: 'drop'
     },
-    onLoad({ key, bcid, supcatid}) {
+    onLoad (obj) {
+        console.log(obj);
+        let { key, bcid, supcatid } = obj;
         const _this = this;
         let pageNo = _this.data.pageNo,
             url = '',

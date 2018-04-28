@@ -3,7 +3,7 @@ view,input{box-sizing:border-box;}
 .topSearch{ background:#181818; height:100rpx;}
 .searchCon{padding:20rpx; position: relative;}
 .searchCon input{ background: #fff;font-size:30rpx;height:60rpx; border-radius: 30rpx; line-height: 60rpx; border: none;width:100%;padding-left:70rpx;}
-.searchCon:before{ content:""; display: block; position: absolute; top: 20rpx;left:20rpx; height: 60rpx; width: 60rpx; background:url(https://192.168.120.32/images/cpk/cpkIndexIco.png) 22rpx 17rpx no-repeat; background-size: 300rpx 600rpx;}
+.searchCon:before{ content:""; display: block; position: absolute; top: 20rpx;left:20rpx; height: 60rpx; width: 60rpx; background:url(https://style.org.hc360.com/images/cpk/cpkIndexIco.png) 22rpx 17rpx no-repeat; background-size: 300rpx 600rpx;}
 
 .box1{overflow: hidden; padding:20rpx 5px 0; background: #f5f5f5;}
 .proList{clear:both;padding:0 5rpx 10rpx;}

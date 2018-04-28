@@ -15,7 +15,7 @@ Page({
         const _this = this;
         ajax({
             url: detail.prodinfo,
-            data: {id: 1},
+            data: { id: 1},
         }).then(result => {
             _this.setData({
                 prodatt_arr: Object.keys(result.prodatt),
@@ -23,18 +23,18 @@ Page({
                 prodimage: result.prodimage,
                 prodinfo: result.prodinfo,
                 phoneNum: result.mfbo.tel,
-                applicationId: result.mfbo.id
+                applicationId: result.mfbo.id,
+                pcid: 1
             });
         });
     },
     imgInfo(e) {
         let index = e.currentTarget.dataset.index,
             prodimage = this.data.prodimage;
-        // let img_arr = prodimage.map(res => res.name);
-        let img_arr = ['https://192.168.120.32/images/microMall/program/dImg1.png'];
+        let img_arr = prodimage.map(res => res.name);
         wx.previewImage({
             current: img_arr[index], // 当前显示图片的http链接
-            urls: img_arr // 需要预览的图片http链接列表
+            urls: img_arr   // 需要预览的图片http链接列表
         });
     },
     /**
@@ -44,20 +44,30 @@ Page({
      */
     application () {
         const _this = this;
-        let {prodimage, prodinfo} = _this.data;
-        // wechatLogin(({openid}) => {
-        //     ajax({
-        //         url: '',
-        //         data: {
-        //             prodimage :prodimage[0].name,
-        //             prodinfoName: prodinfo.name,
-        //             prodinfoPrice: prodinfo.price,
-        //             openid: openid
-        //         }
-        //     }).then(res => {
-        //         console.log(res);
-        //     });
-        // });
+        let {prodimage, prodinfo, pcid} = _this.data;
+        wechatLogin(({openid}) => {
+            ajax({
+                url: detail.distribut,
+                data: {
+                    pid: 2,
+                    pic :prodimage[0].name,
+                    title: prodinfo.name,
+                    openid: openid
+                }
+            }).then(res => {
+                let hint = ''
+                switch (res) {
+                    case 0: hint = '申请成功'; break;
+                    case 1: hint = '已申请过，请勿重复申请'; break;
+                    case 2: hint = '系统异常'; break;
+                }
+                wx.showToast({
+                    title: hint,
+                    icon: 'none'
+                });
+                // console.log(res);
+            });
+        });
     },
     /**
      * [consultingPhone() ]
@@ -77,8 +87,8 @@ Page({
     onShareAppMessage: function (options) {
         const _this = this;
         let { prodinfo, prodimage } = _this.data,
-            // shareImg = prodimage[0].name || '',
-            shareImg = 'https://192.168.120.32/images/microMall/program/dImg1.png',
+            shareImg = prodimage[0].name || '',
+            // shareImg = 'https://style.org.hc360.com/images/microMall/program/dImg1.png',
             title = prodinfo.name;
         // 设置菜单中的转发按钮触发转发事件时的转发内容
         let shareObj = {

@@ -11,18 +11,17 @@
             indicator-dots="{{prodimage.length <= 1 ? false : true }}"
             circular="true"
             autoplay="true">
-            <!-- <block wx:for="{{picUrls}}" wx:key="{{index}}"> -->
+             <block wx:for="{{prodimage}}" wx:key="{{item.name}}"> 
                 <swiper-item>
                     <image
                         class="proImgBoxImg"
                         mode="aspectFill"
-                        src="https://192.168.120.32/images/microMall/program/dImg1.png"
+                        src="{{item.name}}"
                         data-index="{{index}}"
                         bindtap="imgInfo" />
                 </swiper-item> 
-            <!-- </block> -->
+             </block> 
         </swiper>
-        <!-- <image class="proImgBoxImg" src="https://192.168.120.32/images/microMall/program/dImg1.png"></image> -->
     </view>
 </view>
 <view class="proTit">
@@ -114,21 +113,21 @@
             <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
             <text class='newsTime'>2018-04-16  18:12:23</text>
             <view class='newsImg'>
-                <image src='https://192.168.120.32/images/microMall/program/aimg2.jpg' />
+                <image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg' />
             </view>
         </view>
         <view class='newsList'>
             <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
             <text class='newsTime'>2018-04-16  18:12:23</text>
             <view class='newsImg'>
-                <image src='https://192.168.120.32/images/microMall/program/aimg2.jpg' />
+                <image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg' />
             </view>
         </view>
         <view class='newsList'>
             <text class='newsName'>【慧聪头条】奔驰召回产品 因前后桥螺栓损因前后桥螺栓损</text>
             <text class='newsTime'>2018-04-16  18:12:23</text>
             <view class='newsImg'>
-                <image src='https://192.168.120.32/images/microMall/program/aimg2.jpg' />
+                <image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg' />
             </view>
         </view>
         <view class='newsList noImg'>
@@ -176,7 +175,7 @@
     <view class='proList'>
         <view class='proCon'>
             <view class='proImgCon'>
-                <image class='proImg' src='https://192.168.120.32/images/microMall/program/proGimg.png' />
+                <image class='proImg' src='https://style.org.hc360.com/images/microMall/program/proGimg.png' />
             </view>  
             <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
             <view class='price'>
@@ -185,7 +184,7 @@
         </view>
         <view class='proCon'>
             <view class='proImgCon'>
-                <image class='proImg' src='https://192.168.120.32/images/microMall/program/aimg2.jpg' />
+                <image class='proImg' src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg' />
             </view>
             <text class='protil'>韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装韩版宽松套头卫衣连帽加绒长袖女刺绣字母春装</text>
             <view class='price'>

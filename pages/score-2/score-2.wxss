@@ -6,7 +6,7 @@ page{height:100%;background:#f6f6f6;}
 .evaluateList{clear:both;height:70rpx;line-height:70rpx;overflow:hidden;}
 .e_txt_l{float:left;width:25%;font-size:30rpx;color:#333;}
 .starCon{float:left;width:55%;}
-.s_1,.s_2{width:38rpx;height:38rpx;display:block;float:left;background:url(https://192.168.120.32/images/cpk/p_c_ico2.png) no-repeat -154rpx 0;background-size:194rpx 36rpx; vertical-align: middle;margin:18rpx 15rpx 0;}
+.s_1,.s_2{width:38rpx;height:38rpx;display:block;float:left;background:url(https://style.org.hc360.com/images/cpk/p_c_ico2.png) no-repeat -154rpx 0;background-size:194rpx 36rpx; vertical-align: middle;margin:18rpx 15rpx 0;}
 .s_1{background-position: 0 0;}
 .s_2{background-position: -72rpx 0;}
 .e_txt_r{float:left;width:20%;font-size:26rpx;color:#999;}

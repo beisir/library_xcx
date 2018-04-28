@@ -8,7 +8,7 @@
     <view>4、自锁开关：是机器最大转速下持续运转电源开关按到底后在按住自锁开关，然后松开电源开关，最后在松自锁开关</view>
     <view>5、冲击开关：有锤子的一遍为冲击状态，另一边为平钻状态，随机可能较紧推不动时可以运行机器再推</view>
     <view class='intructionsImg'>
-      <image src='https://192.168.120.32/images/cpk/intructionsImg.png' style='width:682rpx;height:962rpx;'></image>
+      <image src='https://style.org.hc360.com/images/cpk/intructionsImg.png' style='width:682rpx;height:962rpx;'></image>
     </view>
   </view>
 </view>

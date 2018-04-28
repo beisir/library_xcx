@@ -7,16 +7,17 @@
             placeholder='请输入商品关键字'
             focus="true"
             maxlength="50"
+            value="{{textValue}}"
             confirm-type="搜索"
             bindconfirm="sendKeyWord"/>
-        <view class='cancelBtn'>取消</view>
+        <view class='cancelBtn' bindtap="cancelBtn">取消</view>
     </view>
 </view>
-<view class='seaHistory'>
+<view class='seaHistory' wx:if="{{historical_terms.length}}">
     <text>历史搜索</text>
     <view class='seaHistoryCon'>
         <block wx:for="{{historical_terms}}" wx:key="{{item}}">
-            <view class='seaWord'>{{item}}</view>
+            <navigator class='seaWord' url="/pages/search-list/search-list?key={{item}}">{{item}}</navigator>
         </block>
     </view>
 </view>

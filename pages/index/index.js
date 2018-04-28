@@ -4,9 +4,9 @@ Page({
     data: {
         swiperActive: 0,    // 轮播图Index
         swiperList: [       // 轮播图地址
-            'https://192.168.120.32/images/cpk/bImg1.png',
-            'https://192.168.120.32/images/cpk/bImg1.png',
-            'https://192.168.120.32/images/cpk/bImg1.png'
+            'https://style.org.hc360.com/images/cpk/bImg1.png',
+            'https://style.org.hc360.com/images/cpk/bImg1.png',
+            'https://style.org.hc360.com/images/cpk/bImg1.png'
         ],
         hotTab: [
             {
@@ -52,7 +52,6 @@ Page({
         ajax({
             url: index_page.prodbytime + pageNo
         }).then(result => {
-            console.log(result)
             wx.stopPullDownRefresh();
             if (result.content.length){
                 _this.setData({

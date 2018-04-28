@@ -1,6 +1,6 @@
 /* pages/ask-detail/ask-detail.wxss */
 .askBtn{display: block; float: right;margin-right: 20rpx; color: #49a3ff; font-size: 24rpx;}
-.askBtn::after{ content:""; display: inline-block; height: 30rpx; width: 20rpx; vertical-align: middle; margin-left:10rpx;background:url(https://192.168.120.32/images/cpk/cpkIndexIco.png) 3px -485rpx no-repeat;background-size:300rpx 600rpx;}
+.askBtn::after{ content:""; display: inline-block; height: 30rpx; width: 20rpx; vertical-align: middle; margin-left:10rpx;background:url(https://style.org.hc360.com/images/cpk/cpkIndexIco.png) 3px -485rpx no-repeat;background-size:300rpx 600rpx;}
 .askBoxCon{overflow: hidden; background: #fff; margin-top:0;}
 .askList{ padding: 20rpx; border-bottom: 1rpx solid #e4e4e4;} 
 .askName,.answerCon{ position: relative; margin-bottom:20rpx; overflow: hidden; font-size: 28rpx; color: #333; line-height:50rpx; padding-bottom:3rpx; padding-left: 38rpx;}

@@ -1,66 +1,42 @@
-// pages/distribution/distribution.js
+import { ajax, AuthorIzation, wechatLogin } from '../../utils/util.js';
+import { distribution, errImg } from '../../utils/config.js';
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
-})
+    data: {
+        openid: '',
+        page: 1,
+        library_arr: []
+    },
+    onLoad () {
+        const _this = this;
+        wechatLogin(({openid}) => {
+            _this.setData({
+                openid: openid
+            });
+            _this.getLibrary(openid, 1);
+        });
+    },
+    getLibrary (openid,page) {
+        const _this = this;
+        let library_arr = this.data.library_arr;
+        ajax({
+            url: distribution.getByOpenid,
+            data: {
+                openid: openid,
+                page: page
+            }
+        }).then(result => {
+            if (result && result.length) {
+                _this.setData({
+                    library_arr: library_arr.concat(result)
+                });
+            }
+        });
+    },
+    errImgEvent(e) {
+        let errorImgIndex = e.currentTarget.dataset.index, //获取循环的下标
+            imgObject = "library_arr[" + errorImgIndex + "].pic", //carlistData为数据源，对象数组
+            errorImg = {};
+        errorImg[imgObject] = errImg; //我们构建一个对象
+        this.setData(errorImg); //修改数据源对应的数据
+    },
+});

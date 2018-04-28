@@ -10,4 +10,4 @@
 .price{color:#ff3b3b;font-size:24rpx;padding:0 20rpx; text-align: left;}
 .allprice{font-size: 34rpx; padding-top:10rpx; overflow: hidden;}
 .collectionIco{ position: absolute; bottom: 15rpx; right: 20rpx;}
-.collectionIco::before{ content: ""; display: block; margin: 0 auto; height: 45rpx; width: 45rpx;background:url(https://192.168.120.32/images/cpk/cpkIndexIco.png) -160rpx -252rpx no-repeat; background-size: 300rpx 600rpx;}
+.collectionIco::before{ content: ""; display: block; margin: 0 auto; height: 45rpx; width: 45rpx;background:url(https://style.org.hc360.com/images/cpk/cpkIndexIco.png) -160rpx -252rpx no-repeat; background-size: 300rpx 600rpx;}
