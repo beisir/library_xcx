@@ -1,27 +1,20 @@
-<!--pages/rpo-contrast/pro-contrast.wxml-->
 <view class='contrastBox'>
-  <view class='contrastCon'>
-    <view class='contrastList'>
-      <view class='contrastIcoCur'></view>
-      <view class='contrastImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
-      <text class='contrastName'>【批发拓森麻花钻 不锈钢高速钢HSS开孔钻头含钴高M35麻花钻头直柄</text>
+    <view class='contrastCon'>
+        <block wx:for="{{contrastList}}" wx:key="{{item.id}}">
+            <view class='contrastList'>
+                <view 
+                    class="{{item.flag ? 'contrastIcoCur' : 'contrastIco'}}"
+                    data-index="{{index}}"
+                    bindtap="modifyState"></view>
+                <view class='contrastImg'>
+                    <image src='{{item.picpath}}'></image>
+                </view>
+                <text class='contrastName'>{{item.prodname}}</text>
+            </view>
+        </block>
+
+        <navigator class="contrastAdd" url="/pages/search-list/search-list?catid={{catId}}">添加产品</navigator>
+    
     </view>
-    <view class='contrastList'>
-      <view class='contrastIcoCur'></view>
-      <view class='contrastImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
-      <text class='contrastName'>【批发拓森麻花钻 不锈钢高速钢HSS开孔钻头含钴高M35麻花钻头直柄</text>
-    </view>
-    <view class='contrastList'>
-      <view class='contrastIco'></view>
-      <view class='contrastImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
-      <text class='contrastName'>【批发拓森麻花钻 不锈钢高速钢HSS开孔钻头含钴高M35麻花钻头直柄</text>
-    </view>
-    <view class='contrastList'>
-      <view class='contrastIco'></view>
-      <view class='contrastImg'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view>
-      <text class='contrastName'>【批发拓森麻花钻 不锈钢高速钢HSS开孔钻头含钴高M35麻花钻头直柄</text>
-    </view>
-    <view class='contrastAdd'>添加产品</view>
-  </view>
 </view>
-<view class='contrastBtn'>开始对比</view>
+<view class='contrastBtn' bindtap="startContras">开始对比</view>

@@ -86,6 +86,13 @@ Page({
         let pageNo = this.data.pageNo;
         pageNo += 1;
         this.getSearchList(pageNo);
+    },
+    onPullDownRefresh () {
+        this.setData({
+            search_list: []
+        }, () => {
+            this.onLoad();
+        });
     }
 });
 

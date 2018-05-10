@@ -16,3 +16,47 @@
 .parameterList:last-child,.parameterListCon:last-child{ border-bottom: none;}
 .pLeft{width:50%; display:block;float: left;box-sizing:border-box; padding-left: 15%;}
 .pRig{width:50%; display:block;float: left; color: #999;box-sizing:border-box; padding-left: 15%;}
+
+.contrast-container{
+    position: absolute;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.scroll-view{
+    flex: 1;
+    height: calc(100% - 200rpx);
+}
+
+
+/* .parameterListCon{
+    display: flex;
+}
+
+.uls{
+    width: 20%;
+    background: #cccccc;    
+}
+.uls1{
+    width: 20%;
+}
+.uls .li, .uls1 .li{
+    line-height: 60rpx;
+    text-align: center;
+} */
+
+  
+.detailTit{
+    /* position: absolute; */
+    top: 0;
+}  
+
+
+.scroll-wrapper{
+    height: 100%;
+    position: relative;
+}

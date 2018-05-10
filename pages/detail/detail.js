@@ -1,4 +1,4 @@
-import { ajax, AuthorIzation, wechatLogin} from '../../utils/util.js';
+import { ajax, AuthorIzation, wechatLogin } from '../../utils/util.js';
 import { detail } from '../../utils/config.js';
 Page({
     data: {
@@ -9,23 +9,26 @@ Page({
             price: 0
         },
         phoneNum: '010-xxxxxxxx',
-        applicationId: ''
+        applicationId: '',
+        ProdsNum: 'VS',
+        isAdd: true
     },
-    onLoad ({id}) {
+    onLoad({ id }) {
         const _this = this;
         ajax({
             url: detail.prodinfo,
-            data: { id: 1},
+            data: { id: id },
         }).then(result => {
             _this.setData({
                 prodatt_arr: Object.keys(result.prodatt),
                 prodatt: result.prodatt,
                 prodimage: result.prodimage,
                 prodinfo: result.prodinfo,
-                phoneNum: result.mfbo.tel,
+                phoneNum: result.mfbo.tel || '',
                 applicationId: result.mfbo.id,
                 pcid: 1
             });
+            _this.contrastNum(result.prodinfo.catId, id);
         });
     },
     imgInfo(e) {
@@ -42,15 +45,15 @@ Page({
      * [申请分销 ]
      * [-------------------------------------------------]
      */
-    application () {
+    application() {
         const _this = this;
-        let {prodimage, prodinfo, pcid} = _this.data;
-        wechatLogin(({openid}) => {
+        let { prodimage, prodinfo, pcid } = _this.data;
+        wechatLogin(({ openid }) => {
             ajax({
                 url: detail.distribut,
                 data: {
                     pid: 2,
-                    pic :prodimage[0].name,
+                    pic: prodimage[0].name,
                     title: prodinfo.name,
                     openid: openid
                 }
@@ -74,12 +77,96 @@ Page({
      * [ps: 咨询电话 ]
      * [-------------------------------------------------]
      */
-    consultingPhone () {
+    consultingPhone() {
         let phoneNum = this.data.phoneNum;
         wx.makePhoneCall({
             phoneNumber: phoneNum,
         });
     },
+    /**
+     * [addContrast() ]
+     * [ps: 添加对比 ]
+     * [-------------------------------------------------]
+     */
+    addContrast() {
+        const _this = this;
+        let { id, catId, supcatid } = this.data.prodinfo;
+        wechatLogin(({ openid }) => {
+            ajax({
+                url: `${detail.addCompared}/${id}/${catId}/${supcatid}/${openid}`
+            }).then(res => {
+                let prompt = ''
+                switch (res) {
+                    case 0: prompt = '添加失败,请重试'; break;
+                    case 1: prompt = '添加对比成功'; break;
+                    case 2: prompt = '已添加过,请勿重复添加'; break;
+                    case 3: prompt = '商机不存在'; break;
+                    case 4: prompt = '对比个数超限'; break;
+                };
+                wx.showToast({
+                    title: prompt,
+                    icon: res === 1 ? 'success' : 'none',
+                    success () {
+                        res === 1 && setTimeout(() => {
+                            _this.contrastNum(catId, id);                            
+                        }, 1000);
+                    }
+                });
+            });
+        });
+    },
+    /**
+     * [removeContrast() ]
+     * [ps: 取消对比 ]
+     * [-------------------------------------------------]
+     */
+    removeContrast () {
+        const _this = this;
+        let { id, catId } = this.data.prodinfo;
+        wechatLogin(({ openid }) => {
+            ajax({
+                url: `${detail.deleteCompared}/${openid}/${id}`
+            }).then(res => {
+                let cludes = res.includes('1');
+                wx.showToast({
+                    title: cludes ? '取消对比成功':'取消对比失败',
+                    icon: 'none',
+                    success () {
+                        cludes && setTimeout(() => {
+                            _this.contrastNum(catId, id);
+                        }, 1000);
+                    }
+                });
+            });
+        });
+    },
+
+    /**
+     * [contrastNum() ]
+     * [ps: 过取对比个数 ]
+     * [-------------------------------------------------]
+     */
+    contrastNum(catId , id) {
+        const _this = this;
+        wechatLogin(({ openid }) => {
+            ajax({
+                url: detail.prodsNum,
+                data: {
+                    catid: catId,
+                    openid: openid
+                }
+            }).then(result => {
+                let isAdd = result.some(item => item.product_Id === Number(id));
+                _this.setData({
+                    ProdsNum: result.length,
+                    isAdd: isAdd
+                });
+            })
+        });
+    },
+
+
+
     /**
      * [onShareAppMessage() 分享]
      * [-------------------------------------------------]

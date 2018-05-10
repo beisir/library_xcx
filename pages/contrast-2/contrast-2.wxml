@@ -1,57 +1,94 @@
-<!--pages/contrast-2/contrast-2.wxml-->
-<view class='contrastPro'>
-  <view class='contrastProTop'>
-    <view class='vsCon'>对比</view>
-    <view class='contrastProRig'>
-      <view class='pro1'><view class='pro1Img'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view><text class='proName'>常固M20常固M20常固M20</text></view>
-      <view class='pro2'><view class='pro2Img'><image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image></view><text class='proName'>米脂M20</text></view>
+<view class="contrast-container">
+    <view class='contrastPro'>
+        <view class='contrastProTop'>
+            <view class='vsCon'>对比</view>
+            <view class='contrastProRig'>
+                <block wx:for="{{productWithAtt}}" wx:key="{{item.id}}">
+                    <view class='pro1'>
+                        <view class='pro1Img'>
+                            <image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image>
+                        </view>
+                        <text class='proName'>{{item.name}}</text>
+                    </view>
+                </block> 
+            </view>
+        </view>
     </view>
-  </view>  
-</view>
-<view class='detailBox'>
-  <view class='detailTit'>主要参数</view>
-  <view class='parameterBoxCon'>
-    <view class='parameterListCon'>
-      <view class='parameterLeft'>主要参数</view>
-      <view class='parameterRig'>
-        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
-      </view>
-    </view>
-    <view class='parameterListCon'>
-      <view class='parameterLeft'>规格参数</view>
-      <view class='parameterRig'>
-        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
-      </view>
-    </view>
-    <view class='parameterListCon'>
-      <view class='parameterLeft'>机械性能</view>
-      <view class='parameterRig'>
-        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
-      </view>
-    </view>
-  </view>
+
+    <scroll-view
+        class="scroll-view"
+        scroll-y="true"
+        scroll-with-animation="true"
+        scroll-top="{{scrollTop}}"
+        bindscroll="scrollChange">
+        
+        <view class="scroll-wrapper">
+
+        <block 
+            wx:for="{{vsObj}}"
+            wx:for-item="vsItem"
+            wx:for-index="vsKey"
+            wx:key="{{vsKey}}">
+            <view class='detailBox'>
+                <view class='detailTit' 
+                    style="position: {{top >= rects[paramsIndex[vsKey]] ? 'absolute': 'relative'}};">{{vsKey}}</view>
+                <view class='parameterBoxCon'>
+                    <block
+                        wx:for="{{vsItem}}"
+                        wx:for-item="vschild"
+                        wx:for-index="vschildKey"
+                        wx:key="{{vschildKey}}">
+                        <view class='parameterListCon'>
+                            <view class='parameterLeft'>{{vschildKey}}</view>
+                            <view class='parameterRig'>
+                                <view class='parameterList'>
+                                    <block
+                                        wx:for="{{vschild}}"
+                                        wx:for-item="typeItem"
+                                        wx:key="{{typeItem}}">
+                                        <text class='pLeft'>{{typeItem ? typeItem: '-'}}</text>
+                                    </block>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>  
+        </block>
+        </view>
+    </scroll-view>
+
 </view>
 
-<view class='detailBox'>
-  <view class='detailTit'>规则参数</view>
-  <view class='parameterBoxCon'>
-    <view class='parameterListCon'>
-      <view class='parameterLeft'>规则参数</view>
-      <view class='parameterRig'>
-        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
-      </view>
+<!-- <view class='detailBox'>
+    <view class='detailTit'>规则参数</view>
+    <view class='parameterBoxCon'>
+        <view class='parameterListCon'>
+            <view class='parameterLeft'>规则参数</view>
+            <view class='parameterRig'>
+                <view class='parameterList'>
+                    <text class='pLeft'>产品类型</text>
+                    <text class='pRig'>地脚螺栓</text>
+                </view>
+            </view>
+        </view>
+        <view class='parameterListCon'>
+            <view class='parameterLeft'>规格参数</view>
+            <view class='parameterRig'>
+                <view class='parameterList'>
+                    <text class='pLeft'>产品类型</text>
+                    <text class='pRig'>地脚螺栓</text>
+                </view>
+            </view>
+        </view>
+        <view class='parameterListCon'>
+            <view class='parameterLeft'>机械性能</view>
+            <view class='parameterRig'>
+                <view class='parameterList'>
+                    <text class='pLeft'>产品类型</text>
+                    <text class='pRig'>地脚螺栓</text>
+                </view>
+            </view>
+        </view>
     </view>
-    <view class='parameterListCon'>
-      <view class='parameterLeft'>规格参数</view>
-      <view class='parameterRig'>
-        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
-      </view>
-    </view>
-    <view class='parameterListCon'>
-      <view class='parameterLeft'>机械性能</view>
-      <view class='parameterRig'>
-        <view class='parameterList'><text class='pLeft'>产品类型</text><text class='pRig'>地脚螺栓</text></view>
-      </view>
-    </view>
-  </view>
-</view>
+</view>  -->

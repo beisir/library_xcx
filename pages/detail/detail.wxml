@@ -29,8 +29,9 @@
         <view class="proTitle">{{prodinfo.name}}</view>
         <view class="proPrice">
             <text class="proPriceText">￥</text>{{tools(prodinfo.price,0)}}.<text class="proPriceText">{{tools(prodinfo.price,1)}}</text> 
-            <!-- <button type='button' class='contrast'>对比</button>
-            <button type='button'>产品说明书</button>  -->
+            <button type='button' class='contrast' bindtap="addContrast" wx:if="{{!isAdd}}">对比</button>
+            <button type='button' class='contrast' bindtap="removeContrast" wx:else>取消对比</button>
+            <!-- <button type='button'>产品说明书</button>  -->
         </view>
     </view>
     <button class="shareBox" open-type="share">分享</button>
@@ -201,4 +202,4 @@
     <view class='botBtn2' bindtap="application">申请分销</view>
 </view>
 
-<!-- <view class='fixedBtn'>5</view> -->
+<navigator class='fixedBtn' url="/pages/pro-contrast/pro-contrast?catid={{prodinfo.catId}}">{{ProdsNum}}</navigator>

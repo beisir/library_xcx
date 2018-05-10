@@ -9,19 +9,21 @@ Page({
         ispath: '',
         prodbycat_path: '',
         prodbytitle_path: '',
-        prodbysupid_path: '', 
+        prodbysupid_path: '',
+        byCatid_path: '',
         loadingTxt: 'drop'
     },
     onLoad (obj) {
         console.log(obj);
-        let { key, bcid, supcatid } = obj;
+        let { key, bcid, supcatid, catid } = obj;
         const _this = this;
         let pageNo = _this.data.pageNo,
             url = '',
             ispath = '',
             prodbycat_path = '',
             prodbytitle_path = '',
-            prodbysupid_path = '';
+            prodbysupid_path = '',
+            byCatid_path = '';
         if (supcatid) {
             ispath = 'prodbysupid';
             prodbysupid_path = `${search_listPath.prodbysupid}&supid=${supcatid}&pageNo=`
@@ -30,6 +32,10 @@ Page({
             ispath = 'prodbycat';
             prodbycat_path = `${search_listPath.prodbycat}&catid=${'100000000'}&pageNo=`
             url = `${prodbycat_path}${pageNo}`;
+        } else if (catid) {
+            ispath = 'catidpath';
+            byCatid_path = `${search_listPath.byCatid}&catid=${catid}&pageNo=`
+            url = `${byCatid_path}${pageNo}`;
         } else {
             ispath = 'prodbytitle';
             prodbytitle_path = `${search_listPath.prodbytitle}&`
@@ -40,8 +46,10 @@ Page({
             ispath: ispath,
             prodbycat_path: prodbycat_path,
             prodbytitle_path: prodbytitle_path,
-            prodbysupid_path: prodbysupid_path
-        });    
+            prodbysupid_path: prodbysupid_path,
+            byCatid_path: byCatid_path
+        });
+        console.log(url);
         _this.getSearchList(url);
     },
     getSearchList (params) {
@@ -98,7 +106,14 @@ Page({
      * [onReachBottom 微信内置方法 滑动到底部触发]
      */
     onReachBottom () {
-        let { keyword, pageNo, ispath, prodbycat_path, prodbytitle_path, prodbysupid_path } = this.data;
+        let { 
+            keyword,
+            pageNo,
+            ispath,
+            prodbycat_path,
+            prodbytitle_path,
+            prodbysupid_path,
+            byCatid_path} = this.data;
             pageNo += 1;
         let url = '';
         if (ispath === 'prodbytitle') {  // 搜索接口
@@ -107,6 +122,8 @@ Page({
             url = `${prodbycat_path}${pageNo}`
         } else if (ispath === 'prodbysupid') {
             url = `${prodbysupid_path}${pageNo}`
+        } else if (ispath === 'catidpath') {
+            url = `${byCatid_path}${pageNo}`
         }
         this.getSearchList(url);
     }

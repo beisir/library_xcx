@@ -1,13 +1,14 @@
 {
     "pages": [
-        "pages/index/index",        
+        "pages/index/index",
+        "pages/contrast-2/contrast-2",
+        "pages/search-list/search-list",
+        "pages/pro-contrast/pro-contrast",
         "pages/about-us/about-us",
         "pages/download-img/download-img",
         "pages/problems/problems",
         "pages/news/news",
         "pages/score-2/score-2",
-        "pages/contrast-2/contrast-2",
-        "pages/pro-contrast/pro-contrast",
         "pages/ask-detail/ask-detail",
         "pages/fill-ask/fill-ask",
         "pages/instructions/instructions",
@@ -21,7 +22,6 @@
         "pages/manage/manage",
         "pages/class/class",
         "pages/search/search",
-        "pages/search-list/search-list",
         "pages/web-view/web-view"
     ],
     "window": {
