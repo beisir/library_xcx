@@ -14,7 +14,7 @@ Page({
         loadingTxt: 'drop'
     },
     onLoad (obj) {
-        console.log(obj);
+        // console.log(obj);
         let { key, bcid, supcatid, catid } = obj;
         const _this = this;
         let pageNo = _this.data.pageNo,
@@ -49,7 +49,7 @@ Page({
             prodbysupid_path: prodbysupid_path,
             byCatid_path: byCatid_path
         });
-        console.log(url);
+        // console.log(url);
         _this.getSearchList(url);
     },
     getSearchList (params) {

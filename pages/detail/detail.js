@@ -98,10 +98,11 @@ Page({
                 let prompt = ''
                 switch (res) {
                     case 0: prompt = '添加失败,请重试'; break;
-                    case 1: prompt = '添加对比成功'; break;
+                    case 1: prompt = '添加对比成功'; break; 
                     case 2: prompt = '已添加过,请勿重复添加'; break;
                     case 3: prompt = '商机不存在'; break;
                     case 4: prompt = '对比个数超限'; break;
+                    default : prompt = '添加失败';
                 };
                 wx.showToast({
                     title: prompt,
@@ -156,11 +157,18 @@ Page({
                     openid: openid
                 }
             }).then(result => {
-                let isAdd = result.some(item => item.product_Id === Number(id));
-                _this.setData({
-                    ProdsNum: result.length,
-                    isAdd: isAdd
-                });
+                if (result){
+                    let isAdd = result.some(item => item.product_Id === Number(id));
+                    _this.setData({
+                        ProdsNum: result.length,
+                        isAdd: isAdd
+                    });
+                } else {
+                    wx.showToast({
+                        title: '对比个数请求错误',
+                        icon: 'none'
+                    });
+                }
             })
         });
     },

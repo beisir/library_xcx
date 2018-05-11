@@ -30,8 +30,8 @@
             wx:for-index="vsKey"
             wx:key="{{vsKey}}">
             <view class='detailBox'>
-                <view class='detailTit' 
-                    style="position: {{top >= rects[paramsIndex[vsKey]] ? 'absolute': 'relative'}};">{{vsKey}}</view>
+            <!-- style="position: {{rects[paramsIndex[vsKey]] < 0 ? 'fixed': 'relative'}};" -->
+                <view class='detailTit'>{{vsKey}}</view>
                 <view class='parameterBoxCon'>
                     <block
                         wx:for="{{vsItem}}"

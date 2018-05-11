@@ -6,11 +6,11 @@ App({
             _this.globalData.openID = options.openid;
         });
 
-        AuthorIzation().then((options) => {
-            // console.log(options);
-        }).catch(err => {
-            console.log(err)
-        });
+        // AuthorIzation().then((options) => {
+        //     // console.log(options);
+        // }).catch(err => {
+        //     console.log(err)
+        // });
     },
     globalData: {
         openID: null,

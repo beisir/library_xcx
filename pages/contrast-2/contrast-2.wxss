@@ -50,13 +50,15 @@
 } */
 
   
-.detailTit{
-    /* position: absolute; */
-    top: 0;
+/* .detailTit{
+    top: 220rpx;
+    width: 100%;
+    z-index: 1000000;
+    background: white;
 }  
 
 
 .scroll-wrapper{
     height: 100%;
     position: relative;
-}
+} */

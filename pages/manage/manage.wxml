@@ -1,10 +1,18 @@
 <view class="signBox">
-    <view class='signLogo'>
-        <image class="logoImg" src="{{userInfo.avatarUrl}}"></image>
-    </view>
-    <text class='signName'>{{userInfo.nickName}}</text>
-    <text class='signClass'>实体店主</text>
-    <button class="user-btn" open-type="getUserInfo" bindgetuserinfo="userInfoHandler"></button>
+    <button 
+        class="user-btn"
+        open-type="getUserInfo" 
+        bindgetuserinfo="userInfoHandler">
+        <view class='signLogo'>
+            <image class="logoImg" src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <text class='signName'>{{userInfo.nickName}}</text>
+    </button>
+      <text class='signClass' catchtap="catchClickFn">实体店主</text> 
+     <!-- <button 
+         class='signClass' 
+         open-type="getPhoneNumber"   
+         bindgetphonenumber="getPhoneNumber">实体店主</button>  -->
 </view>
 
 <view class='serviceBox'>

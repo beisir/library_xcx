@@ -93,3 +93,6 @@
     background-size: 300rpx 600rpx;
     margin: 26rpx 10px 0;
 }
+.godetail{
+    overflow: hidden;
+}

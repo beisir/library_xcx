@@ -17,10 +17,10 @@ const ajax = function (params, isLoading = false) {
             method: params.method || 'GET',
             url: params.url,
             data: params.data || {},
-            header: {
+            header: params.header || {
                 "Accept": "application/json, text/javascript, */*"  
                 // 'content-type': 'application/x-www-form-urlencoded' // 默认值
-            } || params.header,
+            },
             success: function (options) {
                 let result = options.data;
                 resolve(result);
@@ -44,34 +44,42 @@ const ajax = function (params, isLoading = false) {
     });
 }
 
-function wechatLogin (callback) {
-    wx.getStorage({
-        key: 'openID',
-        success(res) {
-            // console.log(res);
-            if (res.errMsg.includes('ok')) {
-                callback(res.data);
-            };
-        },
-        fail(err) {
-            wx.login({
-                success: res => {
-                    ajax({
-                        url: app.weixin,
-                        data: {
-                            code: res.code
-                        }
-                    }).then(options => {
-                        wx.setStorage({
-                            key: 'openID',
-                            data: options,
-                        });
-                        callback(options);
+function wechatLogin (callback, session) {
+    if (session){
+        ISlogin()
+    } else {
+        wx.getStorage({
+            key: 'openID',
+            success(res) {
+                // console.log(res);
+                if (res.errMsg.includes('ok')) {
+                    callback(res.data);
+                };
+            },
+            fail(err) {
+                ISlogin();
+            }
+        });
+    }
+    function ISlogin() {
+        wx.login({
+            success: res => {
+                ajax({
+                    url: app.weixin,
+                    data: {
+                        code: res.code
+                    }
+                }).then(options => {
+                    wx.setStorage({
+                        key: 'openID',
+                        data: options,
                     });
-                }
-            })
-        }
-    });
+                    callback(options);
+                });
+            }
+        })
+    }
+
 };
 function AuthorIzation (authorString = 'scope.userInfo') {
     return new Promise((resolve, reject) => {

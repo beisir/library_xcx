@@ -6,10 +6,12 @@
                     class="{{item.flag ? 'contrastIcoCur' : 'contrastIco'}}"
                     data-index="{{index}}"
                     bindtap="modifyState"></view>
-                <view class='contrastImg'>
-                    <image src='{{item.picpath}}'></image>
-                </view>
-                <text class='contrastName'>{{item.prodname}}</text>
+                <navigator url="/pages/detail/detail?id={{item.prodid}}" class="godetail">
+                    <view class='contrastImg'>
+                        <image src='{{item.picpath}}'></image>
+                    </view>
+                    <text class='contrastName'>{{item.prodname}}</text>
+                </navigator>
             </view>
         </block>
 

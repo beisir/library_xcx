@@ -82,11 +82,12 @@ Page({
 
 
     scrollChange (e) {
+        const _this = this;
         let { rects } = this.data;
         let scrollTop = e.detail.scrollTop;   
-        console.log(scrollTop);
-        this.setData({
-            top: scrollTop
-        });
+        // this.setData({
+        //     top: scrollTop
+        // });
+
     }
 })
