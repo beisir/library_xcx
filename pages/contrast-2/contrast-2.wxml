@@ -6,7 +6,7 @@
                 <block wx:for="{{productWithAtt}}" wx:key="{{item.id}}">
                     <view class='pro1'>
                         <view class='pro1Img'>
-                            <image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image>
+                            <image src='{{item.imgs[0].name}}'></image>
                         </view>
                         <text class='proName'>{{item.name}}</text>
                     </view>
