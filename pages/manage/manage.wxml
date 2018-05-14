@@ -23,3 +23,14 @@
         </navigator>
     </block>
 </view>
+
+<view class="signClassAlert" bindtap="hideSlide" wx:if="{{aniStyle}}">
+    <view class="signClassCon {{aniStyle ? 'slideup': 'slidedown' }}">
+        <block wx:for="{{shopkeeper}}" wx:key="{{item}}">
+            <text 
+                catchtap="selectShop"
+                data-index="{{index}}">{{item}}</text>
+        </block>
+        <button class='signClassBtn'>取消</button>
+    </view>
+</view>

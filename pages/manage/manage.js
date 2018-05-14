@@ -27,7 +27,9 @@ Page({
                 text: '关于我们',
                 url: '/pages/about-us/about-us'
             }
-        ]
+        ],
+        aniStyle: false,
+        shopkeeper: [1,2,3,4,5,6,7,8]
     },
     onLoad () {
         const _this = this,
@@ -47,9 +49,20 @@ Page({
             });
             wx.setStorageSync('userInfo', userInfo)
         }
+    },
+    hideSlide () {
+        this.setData({
+            aniStyle: false
+        });
+    },
+    catchClickFn () {
+        this.setData({
+            aniStyle: true
+        });
+    },
+    selectShop (e) {
+        console.log(e)
     }
-    
-    
     
     // , getPhoneNumber (e) {
     //     let { encryptedData, iv} = e.detail
@@ -78,17 +91,17 @@ Page({
     //     console.log(e.detail.iv)
     //     console.log(e.detail.encryptedData)
     // }
-    ,
-    catchClickFn (e){
-        wx.showActionSheet({
-            itemList: ['A', 'B', 'C', 'E', 'A', 'B'],
-            success: function (res) {
-                console.log(res.tapIndex)
-            },
-            fail: function (res) {
-                console.log(res.errMsg)
-            }
-        })
+    // ,
+    // catchClickFn (e){
+    //     wx.showActionSheet({
+    //         itemList: ['A', 'B', 'C', 'E', 'A', 'B'],
+    //         success: function (res) {
+    //             console.log(res.tapIndex)
+    //         },
+    //         fail: function (res) {
+    //             console.log(res.errMsg)
+    //         }
+    //     })
 
-    }
+    // }
 })
