@@ -14,7 +14,7 @@ Page({
         loadingTxt: 'drop'
     },
     onLoad (obj) {
-        // console.log(obj);
+        console.log(obj);
         let { key, bcid, supcatid, catid } = obj;
         const _this = this;
         let pageNo = _this.data.pageNo,
@@ -39,7 +39,7 @@ Page({
         } else {
             ispath = 'prodbytitle';
             prodbytitle_path = `${search_listPath.prodbytitle}&`
-            url = `${prodbytitle_path}title=${encodeURIComponent(key)}&pageNo=${pageNo}`;
+            url = `${prodbytitle_path}title=${key}&pageNo=${pageNo}`;
         };
         _this.setData({
             keyword: key || '',

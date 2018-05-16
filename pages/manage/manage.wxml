@@ -8,12 +8,13 @@
         </view>
         <text class='signName'>{{userInfo.nickName}}</text>
     </button>
-      <text class='signClass' catchtap="catchClickFn">实体店主</text> 
+    <text class='signClass' catchtap="catchClickFn">{{shopName}}</text> 
      <!-- <button 
          class='signClass' 
          open-type="getPhoneNumber"   
          bindgetphonenumber="getPhoneNumber">实体店主</button>  -->
 </view>
+
 
 <view class='serviceBox'>
     <block wx:for="{{manage_arr}}" wx:key="{{item.icon}}">

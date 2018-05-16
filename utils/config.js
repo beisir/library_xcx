@@ -11,7 +11,7 @@ module.exports = {
     },
     search_listPath: {
         prodbycat: `${hostname}/get/prodbycat?pageSize=6`,
-        prodbytitle: `${hostname}/get/prodbytitle?pageSize=6`,
+        prodbytitle: `${hostname}/search?pageSize=6`,
         prodbysupid: `${hostname}/get/prodbysupid?pageSize=10`,
         byCatid: `${hostname}/findProdsByCatid?pageSize=6`
     },
@@ -30,6 +30,10 @@ module.exports = {
     },
     contrast2: {
         productWithAtts: `${hostname}/findProductWithAtts`
+    },
+    manage: {
+        addUser: `${hostname}/addUseridentity`,
+        getUser: `${hostname}/getUseridentity`
     },
     errImg: 'https://style.org.hc360.com/images/microMall/program/proGimg.png'
     

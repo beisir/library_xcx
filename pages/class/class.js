@@ -44,6 +44,11 @@ Page({
             }
         }, isLoading);
     },
+    /**
+     * [selectAside() 点击侧边栏一级菜单点击事件]
+     * [ps: 根据一级菜单选择请求并渲染二级三级]
+     * [-------------------------------------------------]
+     */
     selectAside (e) {
         const _this = this;
         let { index, supcatid, title} = e.target.dataset;

@@ -45,10 +45,9 @@ Page({
             obj[item.groupName] = {};
             item.params.forEach((val, ind) => {
                 obj[item.groupName][val.name] = new Array(2);
-                // console.log(val);
+                console.log(val);
             });
         });
-        console.log(obj);
         productWithAtt.forEach((attItem, attIndex) => {
             attItem.attvalues.forEach((valItem, valIndex) => {
                 let keyItem = Object.keys(obj[valItem.attGroup]);

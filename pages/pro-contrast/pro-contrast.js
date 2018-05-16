@@ -8,11 +8,17 @@ Page({
         catId: ''
     },
     onLoad({ catid}) {
-        const _this = this;    
-        wechatLogin(({openid}) => {
+        this.setData({
+            catId: catid
+        });
+    },
+    onShow () {
+        const _this = this;
+        let catid = this.data.catId;
+        wechatLogin(({ openid }) => {
             _this.setData({
                 openid: openid,
-                catId: catid
+                statusList: []
             });
             _this.contrastPageList(openid, catid);
         });

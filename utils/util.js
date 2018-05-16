@@ -42,8 +42,13 @@ const ajax = function (params, isLoading = false) {
             }
         });
     });
-}
+};
 
+/**
+ * [wechatLogin() 登陆信息 主要获取openid ，sesstionKey ]
+ * [{params: Object({callback: '获取成功返回回调函数', 'session': Boolean值 ，是否获取最新，sesstionKey})}]
+ * [-------------------------------------------------]
+ */
 function wechatLogin (callback, session) {
     if (session){
         ISlogin()
@@ -81,7 +86,52 @@ function wechatLogin (callback, session) {
     }
 
 };
-function AuthorIzation (authorString = 'scope.userInfo') {
+/**
+ * [AuthorIzation() 授权登陆 ]
+ * [{params: Object({e ：如果有e的参数带表手动触发获取授权，没有情况下获取缓存授权信息})}]
+ * [-------------------------------------------------]
+ */
+const AuthorIzation = (e) => {
+    return new Promise((resolve, reject) => {
+        wx.getStorage({
+            key: 'userInfo',
+            success(options) {
+                if (options.errMsg.includes('ok')) {
+                    resolve(options.data);
+                } else {
+                    wx.showToast({
+                        title: '获取错误',
+                        icon: 'none'
+                    });
+                };
+            },
+            fail() {
+                if (e !== undefined) {
+                    let { userInfo, errMsg } = e.detail;
+                    if (errMsg.includes('ok')) {
+                        wx.setStorageSync('userInfo', userInfo);
+                        resolve(userInfo);
+                    } else {
+                        wx.showToast({
+                            title: '授权失败',
+                            icon: 'none'
+                        });
+                    };
+                }
+            }
+        });
+    });
+};
+
+module.exports = {
+    ajax: ajax,
+    AuthorIzation: AuthorIzation,
+    wechatLogin: wechatLogin
+}
+
+
+
+/* function AuthorIzation (authorString = 'scope.userInfo') {
     return new Promise((resolve, reject) => {
         wx.getSetting({
             success(options) {
@@ -142,7 +192,6 @@ function AuthorIzation (authorString = 'scope.userInfo') {
         })
     });
 };
- 
 function getAuthor (authorString) {
     return new Promise((resolve, reject) => {
         switch (authorString) {
@@ -160,10 +209,4 @@ function getAuthor (authorString) {
 
     });
 };
-
-
-module.exports = {
-    ajax: ajax,
-    AuthorIzation: AuthorIzation,
-    wechatLogin: wechatLogin
-}
+*/

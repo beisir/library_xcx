@@ -1,4 +1,4 @@
-import { ajax, AuthorIzation, wechatLogin } from '../../utils/util.js';
+import { ajax, wechatLogin } from '../../utils/util.js';
 import { distribution, errImg } from '../../utils/config.js';
 Page({
     data: {

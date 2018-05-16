@@ -1,16 +1,10 @@
-import { AuthorIzation, wechatLogin } from './utils/util.js';
+import { wechatLogin } from './utils/util.js';
 App({
     onLaunch: function () {
         const _this = this;
         wechatLogin((options) => {
             _this.globalData.openID = options.openid;
         });
-
-        // AuthorIzation().then((options) => {
-        //     // console.log(options);
-        // }).catch(err => {
-        //     console.log(err)
-        // });
     },
     globalData: {
         openID: null,

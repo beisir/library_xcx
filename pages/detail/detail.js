@@ -1,4 +1,4 @@
-import { ajax, AuthorIzation, wechatLogin } from '../../utils/util.js';
+import { ajax, wechatLogin } from '../../utils/util.js';
 import { detail } from '../../utils/config.js';
 Page({
     data: {
@@ -11,9 +11,14 @@ Page({
         phoneNum: '010-xxxxxxxx',
         applicationId: '',
         ProdsNum: 'VS',
-        isAdd: true
+        isAdd: true,
+        id: ''
     },
     onLoad({ id }) {
+        // this.setData({
+        //     id: id
+        // });
+
         const _this = this;
         ajax({
             url: detail.prodinfo,
@@ -21,16 +26,41 @@ Page({
         }).then(result => {
             _this.setData({
                 prodatt_arr: Object.keys(result.prodatt),
-                prodatt: result.prodatt,
-                prodimage: result.prodimage,
-                prodinfo: result.prodinfo,
-                phoneNum: result.mfbo.tel || '',
+                prodatt: result.prodatt || {},
+                prodimage: result.prodimage || {},
+                prodinfo: result.prodinfo || {},
+                phoneNum: result.mfbo.tel || '00000000',
                 applicationId: result.mfbo.id,
                 pcid: 1
             });
             _this.contrastNum(result.prodinfo.catId, id);
         });
+
     },
+    // onShow() {
+    //     const _this = this;
+    //     let { id, prodinfo } = this.data;
+    //     console.log(Object.keys(prodinfo).length)
+    //     if (Object.keys(prodinfo).length <= 1) {
+    //         ajax({
+    //             url: detail.prodinfo,
+    //             data: { id: id },
+    //         }).then(result => {
+    //             _this.setData({
+    //                 prodatt_arr: Object.keys(result.prodatt),
+    //                 prodatt: result.prodatt || {},
+    //                 prodimage: result.prodimage || {},
+    //                 prodinfo: result.prodinfo || {},
+    //                 phoneNum: result.mfbo.tel || '00000000',
+    //                 applicationId: result.mfbo.id,
+    //                 pcid: 1
+    //             });
+    //             _this.contrastNum(result.prodinfo.catId, id);
+    //         });
+    //     } else {
+    //         _this.contrastNum(prodinfo.catId, id);
+    //     }
+    // },
     imgInfo(e) {
         let index = e.currentTarget.dataset.index,
             prodimage = this.data.prodimage;
@@ -79,6 +109,7 @@ Page({
      */
     consultingPhone() {
         let phoneNum = this.data.phoneNum;
+        phoneNum = phoneNum ? phoneNum : "00000000";
         wx.makePhoneCall({
             phoneNumber: phoneNum,
         });
@@ -160,7 +191,7 @@ Page({
                 if (result){
                     let isAdd = result.some(item => item.product_Id === Number(id));
                     _this.setData({
-                        ProdsNum: result.length,
+                        ProdsNum: result.length ? result.length : 'VS',
                         isAdd: isAdd
                     });
                 } else {

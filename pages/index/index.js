@@ -8,6 +8,11 @@ Page({
             'https://style.org.hc360.com/images/cpk/bImg1.png',
             'https://style.org.hc360.com/images/cpk/bImg1.png'
         ],
+        /**
+         * [hotTab [Array] ]
+         * [ 轮播图之下的4个tab ]
+         * [-------------------------------------------------]
+         */
         hotTab: [
             {
                 icon: 'ico1',
@@ -31,7 +36,8 @@ Page({
             }
         ],
         // hotTxt: ['响应建筑节能大潮设计成趋势响应建筑节能大趋势响应建筑节能大'],   // 今日热点的数据
-        search_list: []     // 大家都在看的数据列表
+        // 大家都在看的数据列表
+        search_list: []
     },
     /**
      * [onLoad() 初始调用数据]
@@ -87,6 +93,11 @@ Page({
         pageNo += 1;
         this.getSearchList(pageNo);
     },
+    /**
+     * [onPullDownRefresh() 下拉刷新 ]
+     * [e: 当页面达到最底部触发]
+     * [-------------------------------------------------]
+     */
     onPullDownRefresh () {
         this.setData({
             search_list: []

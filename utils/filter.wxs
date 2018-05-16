@@ -17,4 +17,6 @@ var DateFr = {
     }
 }
 
-module.exports = DateFr.priceFoalt;
+module.exports = {
+    priceFoalt: DateFr.priceFoalt
+}

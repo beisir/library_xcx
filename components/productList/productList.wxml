@@ -1,7 +1,7 @@
 <wxs src="../../utils/filter.wxs" module="tools" />
 <view class='proList'>
     <block wx:for="{{search_list}}" wx:key="{{item.name}}">
-        <view class='proCon' data-bcid="{{item.id}}" bindtap="goDetail">
+        <view class='proCon' data-bcid="{{item.productInfo.id}}" bindtap="goDetail">
             <view class='proImgCon'>
                 <image 
                     class='proImg'
@@ -13,7 +13,10 @@
             </view>  
             <text class='protil'>{{item.productInfo.name}}</text>
             <view class='price'>
-                ￥<text class='allprice'>{{tools(item.productInfo.price,0)}}.</text>{{tools(item.productInfo.price,1)}}
+                 <!-- ￥<text class='allprice'>{{tools.priceFoalt}}</text>2  -->
+                 <!-- {{tools.priceFoalt(item.price,0)}} -->
+                   ￥<text class='allprice'>{{tools.priceFoalt(item.productInfo.price,0)}}.</text>{{tools.priceFoalt(item.productInfo.price,1)}}   
+                  <!-- ￥<text class='allprice'>{{tools(item.productInfo.price,0)}}.</text>{{tools(item.productInfo.price,1)}}   -->
             </view>
         </view>
     </block>

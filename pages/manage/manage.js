@@ -1,10 +1,13 @@
-import { AuthorIzation, ajax, wechatLogin} from '../../utils/util.js';
+import { ajax, AuthorIzation, wechatLogin} from '../../utils/util.js';
+import { manage } from '../../utils/config.js';
 Page({
     data: {
+        // 授权默认信息
         userInfo: {
             nickName: '点击授权',
             avatarUrl: 'https://style.org.hc360.com/images/microMall/program/mGrayLogo.png'
         },
+        // 个人中心选择列表
         manage_arr: [
             {
                 icon: 'icon1',
@@ -28,40 +31,104 @@ Page({
                 url: '/pages/about-us/about-us'
             }
         ],
+        // 店主类型默认信息
+        shopName: '实体店店主',
         aniStyle: false,
-        shopkeeper: [1,2,3,4,5,6,7,8]
+        // 店主类型共8中类型
+        shopkeeper: ['实体店店主', '微商店主', '国内电商', '跨境电商', '贸易公司', '生产加工企业', '其他']
     },
     onLoad () {
         const _this = this,
-            userInfo = wx.getStorageSync('userInfo');
-        if (userInfo !== '') {
+            shopkeeper = this.data.shopkeeper;
+        AuthorIzation().then((options) => {
             _this.setData({
-                userInfo: userInfo
+                userInfo: options
             });
-        };
+        });
+        wechatLogin(({openid}) => {
+            ajax({
+                url: manage.getUser,
+                data: {
+                    openid: openid
+                }
+            }).then(result => {
+                _this.setData({
+                    shopName: shopkeeper[result]
+                });
+            });
+        });
     },
-    userInfoHandler(options) {
+    /**
+     * [userInfoHandler() ]
+     * [ps: 获取用户信息授权]
+     * [-------------------------------------------------]
+     */
+    userInfoHandler(e) {
         const _this = this;
-        let userInfo = options.detail.userInfo;
-        if (userInfo) {
+        AuthorIzation(e).then((options) => {
             _this.setData({
-                userInfo: userInfo
+                userInfo: options
             });
-            wx.setStorageSync('userInfo', userInfo)
-        }
+        });
     },
+    /**
+     * [hideSlide() ]
+     * [ps: 隐藏店主类型上拉弹框]
+     * [-------------------------------------------------]
+     */
     hideSlide () {
         this.setData({
             aniStyle: false
         });
     },
+    /**
+     * [catchClickFn() ]
+     * [ps: 显示店主类型上拉弹框]
+     * [-------------------------------------------------]
+     */
     catchClickFn () {
         this.setData({
             aniStyle: true
         });
     },
+    /**
+     * [selectShop() 选择修改店主类型事件]
+     * [ps: 。。。。]
+     * [-------------------------------------------------]
+     */
     selectShop (e) {
-        console.log(e)
+        let { index } = e.currentTarget.dataset,
+            shopkeeper = this.data.shopkeeper;
+        const _this = this;
+        wechatLogin(({openid}) => {
+            ajax({
+                url: manage.addUser,
+                data: {
+                    openid: openid,
+                    ui: index
+                }
+            }).then(result => {
+                if (result){
+                    wx.showToast({
+                        title: '修改成功'
+                    });
+                    _this.setData({
+                        shopName: shopkeeper[index],
+                        aniStyle: false
+                    });
+                } else {
+                    wx.showToast({
+                        title: '修改失败',
+                        icon: 'none'
+                    });
+                    _this.setData({
+                        aniStyle: false
+                    });
+                };
+                
+            });
+        })
+        
     }
     
     // , getPhoneNumber (e) {
@@ -104,4 +171,4 @@ Page({
     //     })
 
     // }
-})
+});
