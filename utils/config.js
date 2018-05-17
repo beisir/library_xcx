@@ -7,7 +7,8 @@ module.exports = {
         prodbytime: `${hostname}/get/prodbytime?pageSize=10&pageNo=`,
     },
     classy: {
-        prodcategory: `${hostname}/get/prodcategory`
+        // prodcategory: 'http://10.158.33.187/get/prodcategorynew'
+        prodcategory: `${hostname}/get/prodcategorynew`
     },
     search_listPath: {
         prodbycat: `${hostname}/get/prodbycat?pageSize=6`,

@@ -5,8 +5,7 @@ Page({
         title: '',      // 显示所有产品右侧的标题文字
         title_supid: '',// 所有产品的商机id
         asideCur: 0,    // 侧边栏tabIndex
-        asideTtile: [], // 侧边栏数据列表
-        contentArr: []  // 右边content数据列表
+        asideTtile: [] // 侧边栏数据列表
         // scrollTop: 0,   // 
     },
     /**
@@ -16,20 +15,13 @@ Page({
      */
     onLoad () {
         const _this = this;
-        _this.getLevelMenu('001').then(list => {
+        _this.getLevelMenu('').then(list => {
             if (list && list.length) {
                 _this.setData({
                     asideTtile: list
                 });
-                _this.getLevelMenu(list[0].supcatid, true).then(result => {
-                    _this.setData({
-                        contentArr: result,
-                        title: list[0].supcatname,
-                        title_supid: list[0].supcatid
-                    });
-                });
             };
-        })
+        });
     },
     /**
      * [getLevelMenu() 获取分类列表]
@@ -51,15 +43,13 @@ Page({
      */
     selectAside (e) {
         const _this = this;
-        let { index, supcatid, title} = e.target.dataset;
-        _this.getLevelMenu(supcatid).then(list => {
-            _this.setData({
-                contentArr: list,
-                title: title,
-                asideCur: index,   // 侧边栏tabIndexdex,
-                title_supid: supcatid   // 侧边栏数据列表
-            });
-        }); // 右边content数据列表
+        let { index, supcatid, title, list} = e.target.dataset;
+        _this.setData({
+            title: title,
+            asideCur: index,   // 侧边栏tabIndexdex,
+            title_supid: supcatid   // 侧边栏数据列表
+        });
+        
     }
 
 

@@ -52,7 +52,7 @@ Page({
      * [pageNo: {default: 1} ps: 页面分页]
      * [-------------------------------------------------]
      */
-    getSearchList (pageNo = 1) {
+    getSearchList (pageNo = 0) {
         const _this = this;
         let search_list = _this.data.search_list;
         ajax({
