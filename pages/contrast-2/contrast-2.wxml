@@ -6,7 +6,7 @@
                 <block wx:for="{{productWithAtt}}" wx:key="{{item.id}}">
                     <view class='pro1'>
                         <view class='pro1Img'>
-                            <image src='https://style.org.hc360.com/images/microMall/program/aimg2.jpg'></image>
+                            <image src='{{item.imgs[0].name}}'></image>
                         </view>
                         <text class='proName'>{{item.name}}</text>
                     </view>
@@ -21,40 +21,73 @@
         scroll-with-animation="true"
         scroll-top="{{scrollTop}}"
         bindscroll="scrollChange">
-        
         <view class="scroll-wrapper">
-
-        <block 
-            wx:for="{{vsObj}}"
-            wx:for-item="vsItem"
-            wx:for-index="vsKey"
-            wx:key="{{vsKey}}">
-            <view class='detailBox'>
-            <!-- style="position: {{rects[paramsIndex[vsKey]] < 0 ? 'fixed': 'relative'}};" -->
-                <view class='detailTit'>{{vsKey}}</view>
-                <view class='parameterBoxCon'>
-                    <block
-                        wx:for="{{vsItem}}"
-                        wx:for-item="vschild"
-                        wx:for-index="vschildKey"
-                        wx:key="{{vschildKey}}">
-                        <view class='parameterListCon'>
-                            <view class='parameterLeft'>{{vschildKey}}</view>
-                            <view class='parameterRig'>
-                                <view class='parameterList'>
-                                    <block
-                                        wx:for="{{vschild}}"
-                                        wx:for-item="typeItem"
-                                        wx:key="{{typeItem}}">
-                                        <text class='pLeft'>{{typeItem ? typeItem: '-'}}</text>
-                                    </block>
+            <block 
+                wx:for="{{categoryAttPram}}"
+                wx:for-item="vsItem"
+                wx:for-index="vsKey"
+                wx:key="{{vsItem.group}}">
+                <view class='detailBox'>
+                    <view class='detailTit'>{{vsItem.group}}</view>
+                    <view class='parameterBoxCon'>
+                        <block
+                            wx:for="{{vsItem.catparam}}"
+                            wx:for-item="vschild"
+                            wx:for-index="vschildKey"
+                            wx:key="{{vschildKey}}">
+                            <view class='parameterListCon'>
+                                <view class='parameterLeft'>{{vschild.paraname}}</view>
+                                <view class='parameterRig'>
+                                    <view class='parameterList' 
+                                        style="color: {{vschild.paravalues[0] === vschild.paravalues[1] ? '#000000': 'red'}}">
+                                        <block
+                                            wx:for="{{vschild.paravalues}}"
+                                            wx:for-item="typeItem"
+                                            wx:for-index="typeIndex"
+                                            wx:key="{{typeIndex}}">
+                                            <text class='pLeft'>{{typeItem}}</text>
+                                        </block>
+                                    </view>
                                 </view>
                             </view>
-                        </view>
-                    </block>
-                </view>
-            </view>  
-        </block>
+                        </block>
+                    </view>
+                </view>  
+            </block>
+
+
+
+
+            <!-- <block 
+                wx:for="{{vsObj}}"
+                wx:for-item="vsItem"
+                wx:for-index="vsKey"
+                wx:key="{{vsKey}}">
+                <view class='detailBox'>
+                    <view class='detailTit'>{{vsKey}}</view>
+                    <view class='parameterBoxCon'>
+                        <block
+                            wx:for="{{vsItem}}"
+                            wx:for-item="vschild"
+                            wx:for-index="vschildKey"
+                            wx:key="{{vschildKey}}">
+                            <view class='parameterListCon'>
+                                <view class='parameterLeft'>{{vschildKey}}</view>
+                                <view class='parameterRig'>
+                                    <view class='parameterList'>
+                                        <block
+                                            wx:for="{{vschild}}"
+                                            wx:for-item="typeItem"
+                                            wx:key="{{typeItem}}">
+                                            <text class='pLeft'>{{typeItem ? typeItem: '-'}}</text>
+                                        </block>
+                                    </view>
+                                </view>
+                            </view>
+                        </block>
+                    </view>
+                </view>  
+            </block> -->
         </view>
     </scroll-view>
 

@@ -13,7 +13,7 @@ Page({
     onLoad({ catid, prodid}) {
         const _this = this;
         wechatLogin(({openid}) => {
-            _this.getConrastParams(catid || 100000000, prodid || '1,2');
+            _this.getConrastParams(catid, prodid);
         });
     },
     getConrastParams (catid, prodid) {
@@ -32,37 +32,37 @@ Page({
                     productWithAtt: result.productWithAtt
                 });
             }
-
         });
     },
 
     filterParams (result) {
-        let { categoryAttPram, productWithAtt} = result;
-        let obj = {};
-        let paramsIndex = {}
-        categoryAttPram.forEach((item, index) => {
-            paramsIndex[item.groupName] = index;
-            obj[item.groupName] = {};
-            item.params.forEach((val, ind) => {
-                obj[item.groupName][val.name] = new Array(2);
-                console.log(val);
-            });
-        });
-        productWithAtt.forEach((attItem, attIndex) => {
-            attItem.attvalues.forEach((valItem, valIndex) => {
-                let keyItem = Object.keys(obj[valItem.attGroup]);
-                if (keyItem.indexOf(valItem.attName) === -1){
-                    obj[valItem.attGroup][valItem.attName] = new Array(2);
-                };
-                obj[valItem.attGroup][valItem.attName][attIndex] = valItem.attValue;
-            })
-        });  
-        this.setData({
-            vsObj: obj,
-            paramsIndex: paramsIndex
-        });
-        console.log(paramsIndex)
-        this.getDomeTop();
+        console.log(result);
+        // let { categoryAttPram, productWithAtt} = result;
+        // let obj = {};
+        // let paramsIndex = {}
+        // categoryAttPram.forEach((item, index) => {
+        //     paramsIndex[item.groupName] = index;
+        //     obj[item.groupName] = {};
+        //     item.params.forEach((val, ind) => {
+        //         obj[item.groupName][val.name] = new Array(2);
+        //         console.log(val);
+        //     });
+        // });
+        // productWithAtt.forEach((attItem, attIndex) => {
+        //     attItem.attvalues.forEach((valItem, valIndex) => {
+        //         let keyItem = Object.keys(obj[valItem.attGroup]);
+        //         if (keyItem.indexOf(valItem.attName) === -1){
+        //             obj[valItem.attGroup][valItem.attName] = new Array(2);
+        //         };
+        //         obj[valItem.attGroup][valItem.attName][attIndex] = valItem.attValue;
+        //     })
+        // }); 
+        // console.log(obj);
+        // this.setData({
+        //     vsObj: obj,
+        //     paramsIndex: paramsIndex
+        // });
+        // this.getDomeTop();
     },
     getDomeTop () {
         const _this = this;

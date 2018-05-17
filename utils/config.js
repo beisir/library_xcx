@@ -29,7 +29,8 @@ module.exports = {
         comparedProds: `${hostname}/findComparedProds`      // 对比页面列表
     },
     contrast2: {
-        productWithAtts: `${hostname}/findProductWithAtts`
+        productWithAtts: `${hostname}/findProductWithAttsnew`
+        // productWithAtts: `${hostname}/findProductWithAtts`
     },
     manage: {
         addUser: `${hostname}/addUseridentity`,
