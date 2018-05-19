@@ -10,7 +10,7 @@ App({
         openID: null,
         userInfo: null
     }
-})
+});
 
 
 

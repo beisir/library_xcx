@@ -13,10 +13,10 @@
             </view>  
             <text class='protil'>{{item.productInfo.name}}</text>
             <view class='price'>
-                 <!-- ￥<text class='allprice'>{{tools.priceFoalt}}</text>2  -->
-                 <!-- {{tools.priceFoalt(item.price,0)}} -->
-                   ￥<text class='allprice'>{{tools.priceFoalt(item.productInfo.price,0)}}.</text>{{tools.priceFoalt(item.productInfo.price,1)}}   
-                  <!-- ￥<text class='allprice'>{{tools(item.productInfo.price,0)}}.</text>{{tools(item.productInfo.price,1)}}   -->
+                   <block wx:if="{{item.productInfo.price > 0}}"> 
+                        ￥<text class='allprice'>{{tools.priceFoalt(item.productInfo.price,0)}}.</text>{{tools.priceFoalt(item.productInfo.price,1)}}
+                   </block>
+                   <block wx:else><text class='allprice'>价格面议</text></block>
             </view>
         </view>
     </block>

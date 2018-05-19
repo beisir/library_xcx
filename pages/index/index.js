@@ -4,9 +4,16 @@ Page({
     data: {
         swiperActive: 0,    // 轮播图Index
         swiperList: [       // 轮播图地址
-            'https://style.org.hc360.com/images/cpk/bImg1.png',
-            'https://style.org.hc360.com/images/cpk/bImg1.png',
-            'https://style.org.hc360.com/images/cpk/bImg1.png'
+            {
+                path: '/pages/web-view/web-view?view_index=0',
+                src: 'https://style.org.hc360.com/images/prod/banner1.jpg'
+            }, {
+                path: '/pages/detail/detail?id=2',
+                src: 'https://style.org.hc360.com/images/prod/banner2.jpg'
+            }, {
+                path: '/pages/detail/detail?id=5',
+                src: 'https://style.org.hc360.com/images/prod/banner3.jpg'
+            }
         ],
         /**
          * [hotTab [Array] ]

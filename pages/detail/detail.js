@@ -78,12 +78,13 @@ Page({
     application() {
         const _this = this;
         let { prodimage, prodinfo, pcid } = _this.data;
+        prodimage = prodimage.length ? prodimage[0].name: '';
         wechatLogin(({ openid }) => {
             ajax({
                 url: detail.distribut,
                 data: {
-                    pid: 2,
-                    pic: prodimage[0].name,
+                    pid: prodinfo.id,
+                    pic: prodimage,
                     title: prodinfo.name,
                     openid: openid
                 }

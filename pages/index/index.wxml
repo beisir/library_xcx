@@ -15,8 +15,8 @@
             bindchange="swiperChange">
             <block wx:for="{{swiperList}}" wx:key="{{item}}">
                 <swiper-item>
-                    <navigator url="/pages/web-view/web-view?view_index={{index}}">
-                        <image class='scrollImg' src='{{item}}' />
+                    <navigator url="{{item.path}}">
+                        <image class='scrollImg' src='{{item.src}}' />
                     </navigator>
                 </swiper-item>
             </block>

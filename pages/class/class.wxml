@@ -30,7 +30,7 @@
                             <text class='classRigTit'>{{secondItem.productCategory.supcatname}}</text>
                             <navigator
                                 class='classRigMore' 
-                                url="/pages/search-list/search-list?supcatid={{title_supid}}">所有产品</navigator>
+                                url="/pages/search-list/search-list?supcatid={{secondItem.productCategory.supcatid}}">所有产品</navigator>
                         </view>
                         <view class='classRigBot'>
                             <block 

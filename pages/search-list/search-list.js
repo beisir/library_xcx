@@ -4,7 +4,7 @@ Page({
     data: {
         keyword: '',
         search_list: [],
-        pageNo: 1,
+        pageNo: 0,
         isPullDown: false,
         ispath: '',
         prodbycat_path: '',
@@ -14,7 +14,6 @@ Page({
         loadingTxt: 'drop'
     },
     onLoad (obj) {
-        console.log(obj);
         let { key, bcid, supcatid, catid } = obj;
         const _this = this;
         let pageNo = _this.data.pageNo,
@@ -30,7 +29,7 @@ Page({
             url = `${prodbysupid_path}${pageNo}`
         } else if (bcid) {
             ispath = 'prodbycat';
-            prodbycat_path = `${search_listPath.prodbycat}&catid=${'100000000'}&pageNo=`
+            prodbycat_path = `${search_listPath.prodbycat}&catid=${bcid}&pageNo=`
             url = `${prodbycat_path}${pageNo}`;
         } else if (catid) {
             ispath = 'catidpath';
@@ -113,7 +112,7 @@ Page({
             prodbycat_path,
             prodbytitle_path,
             prodbysupid_path,
-            byCatid_path} = this.data;
+            byCatid_path } = this.data;
             pageNo += 1;
         let url = '';
         if (ispath === 'prodbytitle') {  // 搜索接口
@@ -124,7 +123,7 @@ Page({
             url = `${prodbysupid_path}${pageNo}`
         } else if (ispath === 'catidpath') {
             url = `${byCatid_path}${pageNo}`
-        }
+        };
         this.getSearchList(url);
     }
 });
