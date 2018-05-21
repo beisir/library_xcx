@@ -14,6 +14,7 @@ Page({
         loadingTxt: 'drop'
     },
     onLoad (obj) {
+        console.log(obj)
         let { key, bcid, supcatid, catid } = obj;
         const _this = this;
         let pageNo = _this.data.pageNo,

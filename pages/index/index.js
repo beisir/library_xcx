@@ -23,23 +23,23 @@ Page({
         hotTab: [
             {
                 icon: 'ico1',
-                text: '装修建材',
-                supcatid: '001001'
+                text: '电梯',
+                catid: 100000005
             },
             {
                 icon: 'ico2',
-                text: '五金工具',
-                supcatid: '001001'
+                text: '吊顶',
+                catid: 100000006
             },
             {
                 icon: 'ico3',
-                text: '建筑保温',
-                supcatid: '001001'
+                text: '螺栓',
+                catid: 100000003
             },
             {
                 icon: 'ico4',
-                text: '管材管件',
-                supcatid: '001001'
+                text: '螺母',
+                catid: 100000004
             }
         ],
         // hotTxt: ['响应建筑节能大潮设计成趋势响应建筑节能大趋势响应建筑节能大'],   // 今日热点的数据

@@ -21,8 +21,8 @@ button.contrast{background:url(https://style.org.hc360.com/images/cpk/cpkIndexIc
 .parameterRig{ margin-left: 200rpx;}
 .parameterList{ min-height:40rpx; padding: 20rpx 0; line-height: 40rpx;border-bottom: 1rpx solid #e4e4e4;}
 .parameterList:last-child,.parameterListCon:last-child{ border-bottom: none;}
-.pLeft{ padding-left: 30rpx; width:40%; display:block;float: left;box-sizing:border-box;}
-.pRig{padding-left: 30rpx;width:60%; display:block;float: left; color: #999;box-sizing:border-box;}
+.pLeft{ padding-left: 30rpx; width:50%; display:block;float: left;box-sizing:border-box;text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.pRig{padding-left: 30rpx;width:50%; display:block;float: left; color: #999;box-sizing:border-box;text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
 .bjBoxCon{ overflow: hidden;}
 .bjBoxList{ overflow: hidden; border-bottom: 1rpx solid #e4e4e4; padding:24rpx 20rpx;}
 .bjName{font-size: 28rpx; color: #333; line-height: 40rpx;}

@@ -43,9 +43,10 @@ Page({
         }
     },
     cancelBtn () {
-        this.setData({
-            textValue: ''
-        });
+        wx.navigateBack();
+        // this.setData({
+        //     textValue: ''
+        // });
     }
 
 });

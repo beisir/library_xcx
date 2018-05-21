@@ -31,7 +31,7 @@
 
 <view class='navBox'>
     <block wx:for="{{hotTab}}" wx:key="{{item.icon}}">
-        <navigator class="navTit" hover-class="none" url="/pages/search-list/search-list?supcatid={{item.supcatid}}">
+        <navigator class="navTit" hover-class="none" url="/pages/search-list/search-list?bcid={{item.catid}}&key={{item.text}}">
             <icon class='{{item.icon}}'></icon>
             <text>{{item.text}}</text>
         </navigator>      

@@ -92,7 +92,7 @@ Page({
                 let hint = ''
                 switch (res) {
                     case 0: hint = '申请成功'; break;
-                    case 1: hint = '已申请过，请勿重复申请'; break;
+                    case 1: hint = '您的申请已经提交成功,请等待厂商和您联系'; break;
                     case 2: hint = '系统异常'; break;
                 }
                 wx.showToast({
