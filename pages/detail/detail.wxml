@@ -202,7 +202,13 @@
     <view class='botTel' bindtap="consultingPhone">咨询</view>
     <!-- <view class='collectionIco' style='display:none;'>收藏</view><view class='collectionIcoCur'>收藏</view> -->
     <!-- <view class='botBtn1'>下载铺货</view> -->
-    <view class='botBtn2' bindtap="application">申请分销</view>
+    
+    <button
+        wx:if="{{mobile === ''}}"
+        class='botBtn2'
+        open-type="getPhoneNumber"   
+        bindgetphonenumber="application">申请分销</button>
+    <view wx:else class='botBtn2' bindtap="getlication">申请分销</view> 
 </view>
 
 <navigator class='fixedBtn' url="/pages/pro-contrast/pro-contrast?catid={{prodinfo.catId}}">{{ProdsNum}}</navigator>

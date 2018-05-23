@@ -12,13 +12,10 @@ Page({
         applicationId: '',
         ProdsNum: 'VS',
         isAdd: true,
-        id: ''
+        id: '',
+        mobile: ''
     },
     onLoad({ id }) {
-        // this.setData({
-        //     id: id
-        // });
-
         const _this = this;
         ajax({
             url: detail.prodinfo,
@@ -35,32 +32,14 @@ Page({
             });
             _this.contrastNum(result.prodinfo.catId, id);
         });
-
+        wechatLogin(({openid}) => {
+            let mobile = wx.getStorageSync('mobile');
+            _this.setData({
+                mobile: mobile,
+                openid: openid
+            });
+        });
     },
-    // onShow() {
-    //     const _this = this;
-    //     let { id, prodinfo } = this.data;
-    //     console.log(Object.keys(prodinfo).length)
-    //     if (Object.keys(prodinfo).length <= 1) {
-    //         ajax({
-    //             url: detail.prodinfo,
-    //             data: { id: id },
-    //         }).then(result => {
-    //             _this.setData({
-    //                 prodatt_arr: Object.keys(result.prodatt),
-    //                 prodatt: result.prodatt || {},
-    //                 prodimage: result.prodimage || {},
-    //                 prodinfo: result.prodinfo || {},
-    //                 phoneNum: result.mfbo.tel || '00000000',
-    //                 applicationId: result.mfbo.id,
-    //                 pcid: 1
-    //             });
-    //             _this.contrastNum(result.prodinfo.catId, id);
-    //         });
-    //     } else {
-    //         _this.contrastNum(prodinfo.catId, id);
-    //     }
-    // },
     imgInfo(e) {
         let index = e.currentTarget.dataset.index,
             prodimage = this.data.prodimage;
@@ -75,34 +54,76 @@ Page({
      * [申请分销 ]
      * [-------------------------------------------------]
      */
-    application() {
+    application(e) {
         const _this = this;
-        let { prodimage, prodinfo, pcid } = _this.data;
-        prodimage = prodimage.length ? prodimage[0].name: '';
-        wechatLogin(({ openid }) => {
-            ajax({
-                url: detail.distribut,
-                data: {
-                    pid: prodinfo.id,
-                    pic: prodimage,
-                    title: prodinfo.name,
-                    openid: openid
-                }
-            }).then(res => {
-                let hint = ''
-                switch (res) {
-                    case 0: hint = '申请成功'; break;
-                    case 1: hint = '您的申请已经提交成功,请等待厂商和您联系'; break;
-                    case 2: hint = '系统异常'; break;
-                }
-                wx.showToast({
-                    title: hint,
-                    icon: 'none'
+        let { encryptedData, iv, errMsg} = e.detail
+        if (errMsg.includes('ok')) {
+            encryptedData && wechatLogin(({ session_key, openid }) => {
+                ajax({
+                    url: detail.phonenum,
+                    method: 'POST',
+                    header: {
+                        'Content-type': 'application/x-www-form-urlencoded'
+                    },
+                    data: {
+                        encrypted: encryptedData,
+                        iv: iv,
+                        session_key: session_key
+                    }
+                }).then(phoneNum => {
+                    if ((typeof phoneNum) === 'object'){
+                        _this.setData({
+                            mobile: phoneNum.phoneNumber,
+                            openid: openid
+                        }, () => {
+                            wx.setStorageSync('mobile', phoneNum.phoneNumber);
+                            _this.getlication();
+                        });
+                    } else {
+                        wx.showToast({
+                            title: '获取失败，请重试',
+                            icon: 'none'
+                        });
+                    };
+                }).catch(err => {
+                    console.log(err);
                 });
-                // console.log(res);
+            }, true);   
+        } else {
+            wx.showToast({
+                title: '拒绝了手机号码授权',
+                icon: 'none'
+            });
+        };
+    },
+    getlication (){
+        const _this = this;
+        let { prodimage, prodinfo, pcid, mobile, openid } = _this.data;
+        prodimage = prodimage.length ? prodimage[0].name : '';
+        ajax({
+            url: detail.distribut,
+            data: {
+                pid: prodinfo.id,
+                pic: prodimage,
+                title: prodinfo.name,
+                openid: openid,
+                phone: mobile
+            }
+        }).then(res => {
+            let hint = ''
+            switch (res) {
+                case 0: hint = '您的申请已经提交成功,请等待厂商和您联系'; break;
+                case 1: hint = '已申请过，请勿重复申请'; break;
+                case 2: hint = '系统异常'; break;
+            }
+            wx.showToast({
+                title: hint,
+                icon: 'none'
             });
         });
     },
+    
+
     /**
      * [consultingPhone() ]
      * [ps: 咨询电话 ]

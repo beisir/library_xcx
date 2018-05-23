@@ -21,7 +21,8 @@ module.exports = {
         distribut: `${hostname}/distribut/save`,
         addCompared: `${hostname}/addCompared`,  // 添加商品到对比库,
         prodsNum: `${hostname}/findComparedProdsNum`,
-        deleteCompared: `${hostname}/deleteComparedProd`
+        deleteCompared: `${hostname}/deleteComparedProd`,
+        phonenum: `${hostname}/get/phonenum`
     },
     distribution: {
         getByOpenid: `${hostname}/distribut/getByOpenid`

@@ -1,5 +1,5 @@
 <view class="signBox">
-    <button 
+     <button 
         class="user-btn"
         open-type="getUserInfo" 
         bindgetuserinfo="userInfoHandler">
@@ -7,12 +7,12 @@
             <image class="logoImg" src="{{userInfo.avatarUrl}}"></image>
         </view>
         <text class='signName'>{{userInfo.nickName}}</text>
-    </button>
+    </button> 
     <text class='signClass' catchtap="catchClickFn">{{shopName}}</text> 
-     <!-- <button 
+      <!-- <button 
          class='signClass' 
          open-type="getPhoneNumber"   
-         bindgetphonenumber="getPhoneNumber">实体店主</button>  -->
+         bindgetphonenumber="getPhoneNumber">实体店主</button>   -->
 </view>
 
 

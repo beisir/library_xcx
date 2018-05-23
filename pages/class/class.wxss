@@ -1,9 +1,9 @@
 /* pages/class/class.wxss */
-.classLeft{width:180rpx;left:0;top:0; background: #fff;overflow-y: scroll; position: fixed; bottom:105rpx;}
+.classLeft{width:180rpx;left:0;top:0; background: #fff;overflow-y: scroll; position: fixed; bottom:10rpx;}
 .classLeft text{ height: 100rpx;line-height: 100rpx; color:#333; font-size: 26rpx; text-align: center; display: block; border-bottom: 1rpx solid #e4e4e4;}
 .classLeft::-webkit-scrollbar,.classRig::-webkit-scrollbar {display:none;}
 text.classCur{ background: #f5f5f5; color: #ef322c; margin: -1rpx 0 0; border-bottom: none;}
-.classRig{position:fixed;top:0;right:20rpx;left:200rpx;bottom:105rpx;overflow-y:scroll;}
+.classRig{position:fixed;top:0;right:20rpx;left:200rpx;bottom:10rpx;overflow-y:scroll;}
 .classRigCon{ overflow: hidden;}
 .classRigTitCon{ height: 82rpx; line-height: 82rpx;}
 .classRigTit{float: left; color: #333; line-height: 82rpx; font-size: 26rpx;}

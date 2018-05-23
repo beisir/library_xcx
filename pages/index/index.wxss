@@ -15,7 +15,7 @@ view,input{box-sizing:border-box;}
 icon.ico1{width:90rpx; background-position:15rpx -38rpx;}
 icon.ico2{ background-position:-71rpx -38rpx;}
 icon.ico3{width:110rpx; background-position:-194rpx -42rpx;}
-icon.ico4{width:90rpx; background-position:10rpx -132rpx;}
+icon.ico4{width:110rpx; background-position:10rpx -132rpx;}
 .navBox text{font-size:24rpx;color:#333;}
 .navTit{ float: left;width:25%; text-align: center;padding:15rpx 0;/*height:180rpx*/}
 .hcNewsList{ overflow: hidden; padding: 20rpx;height:120rpx;background: #fff;}

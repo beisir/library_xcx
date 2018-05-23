@@ -65,6 +65,7 @@ Page({
      */
     userInfoHandler(e) {
         const _this = this;
+        console.log(e);
         AuthorIzation(e).then((options) => {
             _this.setData({
                 userInfo: options

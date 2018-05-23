@@ -27,7 +27,7 @@
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#181818",
-        "navigationBarTitleText": "产品库",
+        "navigationBarTitleText": "慧聪产品库",
         "navigationBarTextStyle": "#fff"
     },
     "tabBar": {
