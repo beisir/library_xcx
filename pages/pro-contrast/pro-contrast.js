@@ -69,13 +69,13 @@ Page({
         let { contrastList, catId } = this.data;
 
         let statusList = contrastList.filter(item => item.flag === true);
-        if (statusList.length > 1) {
+        if (statusList.length === 2) {
             wx.navigateTo({
                 url: `/pages/contrast-2/contrast-2?catid=${catId}&prodid=${statusList[0].prodid},${statusList[1].prodid}`
             });
         } else {
             wx.showToast({
-                title: '至少选择两项',
+                title: '请选择两项进行对比',
                 icon: 'none'
             });
         }

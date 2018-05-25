@@ -16,7 +16,7 @@ button.contrast{background:url(https://style.org.hc360.com/images/cpk/cpkIndexIc
 .detailBox{ overflow: hidden; background: #fff; margin-bottom: 20rpx;padding-bottom:98rpx;}
 .detailTit{ height: 90rpx; line-height: 90rpx; color: #333; padding-left: 20rpx; font-size:34rpx; border-bottom: 1px solid #e4e4e4;}
 .parameterBoxCon{ padding: 20rpx; font-size: 24rpx; color: #333;}
-.parameterListCon{ overflow: hidden; border-bottom: 1rpx solid #e4e4e4; position: relative; background:#f8f8f8;}
+.parameterListCon{  border-bottom: 1rpx solid #e4e4e4; position: relative; background:#f8f8f8;}
 .parameterLeft{ height: 100%; position: absolute; top: 0; left: 0; width: 200rpx; padding-left: 30rpx; background: #eee; line-height: 80rpx;box-sizing:border-box;display:flex;align-items:center;}
 .parameterRig{ margin-left: 200rpx;}
 .parameterList{ min-height:40rpx; padding: 20rpx 0; line-height: 40rpx;border-bottom: 1rpx solid #e4e4e4;}
@@ -77,3 +77,5 @@ button.contrast{background:url(https://style.org.hc360.com/images/cpk/cpkIndexIc
 .botBtn2{ background: #ef322c;}
 .noImg .newsName{width:100%;}
 .fixedBtn{ position: fixed; right: 30rpx; bottom:200rpx; line-height: 80rpx; text-align: center; font-size: 42rpx; color: #fff; height: 80rpx; width: 80rpx;background: linear-gradient(#fd5554, #ef322c); border-radius: 50%;}
+.parameterBoxCon .moreBtn{ background: #f8f8f8; border-top:1rpx solid #e4e4e4;}
+  .parameteListBox{overflow: hidden;}  

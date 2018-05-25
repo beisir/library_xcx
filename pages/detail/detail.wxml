@@ -43,19 +43,22 @@
 <view class='detailBox' wx:if="{{prodatt_arr.length}}">
     <view class='detailTit'>常固M20详细参数</view>
     <view class='parameterBoxCon'>
-        <block wx:for="{{prodatt_arr}}" wx:key="{{item}}">
-            <view class='parameterListCon'>
-                <view class='parameterLeft'><text>{{item}}</text></view>
-                <view class='parameterRig'>
-                    <block wx:for="{{prodatt[item]}}" wx:for-item="childItem" wx:key="{{childItem.attName}}">
-                        <view class='parameterList'>
-                            <text class='pLeft'>{{childItem.attName}}</text>
-                            <text class='pRig'>{{childItem.attValue}}</text>
-                        </view>
-                    </block>
+        <view class='parameteListBox' style="height: {{count > 5 ? '405rpx': 'auto'}}">
+            <block wx:for="{{prodatt_arr}}" wx:key="{{item}}">
+                <view class='parameterListCon'>
+                    <view class='parameterLeft'><text>{{item}}</text></view>
+                    <view class='parameterRig'>
+                        <block wx:for="{{prodatt[item]}}" wx:for-item="childItem" wx:key="{{childItem.attName}}">
+                            <view class='parameterList'>
+                                <text class='pLeft'>{{childItem.attName}}</text>
+                                <text class='pRig'>{{childItem.attValue}}</text>
+                            </view>
+                        </block>
+                    </view>
                 </view>
-            </view>
-        </block>
+            </block>
+        </view>
+        <view wx:if="{{count > 5 }}" class='moreBtn' bindtap="moreClick">更多报价</view>
     </view>
 </view>
 

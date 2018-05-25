@@ -13,7 +13,8 @@ Page({
         ProdsNum: 'VS',
         isAdd: true,
         id: '',
-        mobile: ''
+        mobile: '',
+        count: 0 
     },
     onLoad({ id }) {
         const _this = this;
@@ -28,7 +29,8 @@ Page({
                 prodinfo: result.prodinfo || {},
                 phoneNum: result.mfbo.tel || '00000000',
                 applicationId: result.mfbo.id,
-                pcid: 1
+                pcid: 1,
+                count: result.count
             });
             _this.contrastNum(result.prodinfo.catId, id);
         });
@@ -122,8 +124,16 @@ Page({
             });
         });
     },
-    
-
+    /**
+     * [moreClick() ]
+     * [ps: 点击更多 ]
+     * [-------------------------------------------------]
+     */
+    moreClick (){
+        this.setData({
+            count: 0
+        });
+    },
     /**
      * [consultingPhone() ]
      * [ps: 咨询电话 ]
